@@ -1,0 +1,16 @@
+PODS:
+  - Localize-Swift (2.0.0)
+
+DEPENDENCIES:
+  - Localize-Swift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Localize-Swift
+
+SPEC CHECKSUMS:
+  Localize-Swift: c798ec9286494866f7068f85f7c71283ac5bdab4
+
+PODFILE CHECKSUM: 429ce7d8e6f9e3fc678609151cd1d1d1ccfdc8cf
+
+COCOAPODS: 1.6.1

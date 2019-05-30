@@ -1,0 +1,417 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7EDC9B9F229E81C500A9C21C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDC9B9E229E81C500A9C21C /* AppDelegate.swift */; };
+		7EDC9BA1229E81C500A9C21C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDC9BA0229E81C500A9C21C /* ViewController.swift */; };
+		7EDC9BA4229E81C500A9C21C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EDC9BA2229E81C500A9C21C /* Main.storyboard */; };
+		7EDC9BA6229E81C700A9C21C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EDC9BA5229E81C700A9C21C /* Assets.xcassets */; };
+		7EDC9BA9229E81C700A9C21C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EDC9BA7229E81C700A9C21C /* LaunchScreen.storyboard */; };
+		F34485C42C507B702BD0AB0B /* Pods_Bela_blok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 880D90AAE46B3000E08D202E /* Pods_Bela_blok.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1B8CB2E60F5C80D8915A2D3B /* Pods-Bela blok.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bela blok.release.xcconfig"; path = "Target Support Files/Pods-Bela blok/Pods-Bela blok.release.xcconfig"; sourceTree = "<group>"; };
+		46C8A192474B6F53473C9745 /* Pods-Bela blok.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bela blok.debug.xcconfig"; path = "Target Support Files/Pods-Bela blok/Pods-Bela blok.debug.xcconfig"; sourceTree = "<group>"; };
+		7EDC9B9B229E81C500A9C21C /* Bela blok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bela blok.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EDC9B9E229E81C500A9C21C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7EDC9BA0229E81C500A9C21C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7EDC9BA3229E81C500A9C21C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7EDC9BA5229E81C700A9C21C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7EDC9BA8229E81C700A9C21C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7EDC9BAA229E81C700A9C21C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		880D90AAE46B3000E08D202E /* Pods_Bela_blok.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bela_blok.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7EDC9B98229E81C500A9C21C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F34485C42C507B702BD0AB0B /* Pods_Bela_blok.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7EDC9B92229E81C500A9C21C = {
+			isa = PBXGroup;
+			children = (
+				7EDC9B9D229E81C500A9C21C /* Bela blok */,
+				7EDC9B9C229E81C500A9C21C /* Products */,
+				8145AC790F24F9FA1CB49B90 /* Pods */,
+				AFFAFB54158572137393827E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7EDC9B9C229E81C500A9C21C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7EDC9B9B229E81C500A9C21C /* Bela blok.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7EDC9B9D229E81C500A9C21C /* Bela blok */ = {
+			isa = PBXGroup;
+			children = (
+				7EDC9B9E229E81C500A9C21C /* AppDelegate.swift */,
+				7EDC9BA0229E81C500A9C21C /* ViewController.swift */,
+				7EDC9BA2229E81C500A9C21C /* Main.storyboard */,
+				7EDC9BA5229E81C700A9C21C /* Assets.xcassets */,
+				7EDC9BA7229E81C700A9C21C /* LaunchScreen.storyboard */,
+				7EDC9BAA229E81C700A9C21C /* Info.plist */,
+			);
+			path = "Bela blok";
+			sourceTree = "<group>";
+		};
+		8145AC790F24F9FA1CB49B90 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				46C8A192474B6F53473C9745 /* Pods-Bela blok.debug.xcconfig */,
+				1B8CB2E60F5C80D8915A2D3B /* Pods-Bela blok.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AFFAFB54158572137393827E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				880D90AAE46B3000E08D202E /* Pods_Bela_blok.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7EDC9B9A229E81C500A9C21C /* Bela blok */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EDC9BAD229E81C700A9C21C /* Build configuration list for PBXNativeTarget "Bela blok" */;
+			buildPhases = (
+				CBE208459C9A658781CD3EE7 /* [CP] Check Pods Manifest.lock */,
+				7EDC9B97229E81C500A9C21C /* Sources */,
+				7EDC9B98229E81C500A9C21C /* Frameworks */,
+				7EDC9B99229E81C500A9C21C /* Resources */,
+				B6D66FD2F8FFE3FC80C757C1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Bela blok";
+			productName = "Bela blok";
+			productReference = 7EDC9B9B229E81C500A9C21C /* Bela blok.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7EDC9B93229E81C500A9C21C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Josip Zidar";
+				TargetAttributes = {
+					7EDC9B9A229E81C500A9C21C = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 7EDC9B96229E81C500A9C21C /* Build configuration list for PBXProject "Bela blok" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7EDC9B92229E81C500A9C21C;
+			productRefGroup = 7EDC9B9C229E81C500A9C21C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7EDC9B9A229E81C500A9C21C /* Bela blok */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7EDC9B99229E81C500A9C21C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EDC9BA9229E81C700A9C21C /* LaunchScreen.storyboard in Resources */,
+				7EDC9BA6229E81C700A9C21C /* Assets.xcassets in Resources */,
+				7EDC9BA4229E81C500A9C21C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B6D66FD2F8FFE3FC80C757C1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bela blok/Pods-Bela blok-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Localize-Swift/Localize_Swift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Localize_Swift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bela blok/Pods-Bela blok-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBE208459C9A658781CD3EE7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bela blok-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7EDC9B97229E81C500A9C21C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EDC9BA1229E81C500A9C21C /* ViewController.swift in Sources */,
+				7EDC9B9F229E81C500A9C21C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7EDC9BA2229E81C500A9C21C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7EDC9BA3229E81C500A9C21C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7EDC9BA7229E81C700A9C21C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7EDC9BA8229E81C700A9C21C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7EDC9BAB229E81C700A9C21C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7EDC9BAC229E81C700A9C21C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7EDC9BAE229E81C700A9C21C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46C8A192474B6F53473C9745 /* Pods-Bela blok.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q78W77VGGV;
+				INFOPLIST_FILE = "Bela blok/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "belablok.Bela-blok";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7EDC9BAF229E81C700A9C21C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B8CB2E60F5C80D8915A2D3B /* Pods-Bela blok.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q78W77VGGV;
+				INFOPLIST_FILE = "Bela blok/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "belablok.Bela-blok";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7EDC9B96229E81C500A9C21C /* Build configuration list for PBXProject "Bela blok" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EDC9BAB229E81C700A9C21C /* Debug */,
+				7EDC9BAC229E81C700A9C21C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7EDC9BAD229E81C700A9C21C /* Build configuration list for PBXNativeTarget "Bela blok" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EDC9BAE229E81C700A9C21C /* Debug */,
+				7EDC9BAF229E81C700A9C21C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7EDC9B93229E81C500A9C21C /* Project object */;
+}

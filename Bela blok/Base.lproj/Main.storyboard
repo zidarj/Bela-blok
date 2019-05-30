@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QJS-Se-pps">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bela_blok" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5W3-rj-2T0">
+                                <rect key="frame" x="0.0" y="88" width="414" height="574"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBH-eB-J3x">
+                                <rect key="frame" x="0.0" y="762" width="414" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.1400619978" blue="0.093057367670000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="pdi-nt-ByB"/>
+                                </constraints>
+                                <state key="normal" title="Nova igra"/>
+                                <connections>
+                                    <action selector="onTouchNewGameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YLE-1f-2eQ"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vca-x6-Q4s">
+                                <rect key="frame" x="0.0" y="662" width="414" height="100"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="jSf-fe-kxW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zBH-eB-J3x" secondAttribute="bottom" id="CGB-xJ-OMh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zBH-eB-J3x" secondAttribute="trailing" id="DSH-4T-LTf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vca-x6-Q4s" secondAttribute="trailing" id="Der-HP-IFb"/>
+                            <constraint firstItem="zBH-eB-J3x" firstAttribute="top" secondItem="Vca-x6-Q4s" secondAttribute="bottom" id="HPr-GO-aMO"/>
+                            <constraint firstItem="zBH-eB-J3x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="K9P-5b-ZTq"/>
+                            <constraint firstItem="Vca-x6-Q4s" firstAttribute="top" secondItem="5W3-rj-2T0" secondAttribute="bottom" id="NQu-VF-ZJS"/>
+                            <constraint firstItem="5W3-rj-2T0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Yj8-zh-2zc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5W3-rj-2T0" secondAttribute="trailing" id="mUe-NP-OAz"/>
+                            <constraint firstItem="5W3-rj-2T0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="t8x-Nm-eJT"/>
+                            <constraint firstItem="Vca-x6-Q4s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xSP-fz-OJT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="R1N-Jh-Gs3"/>
+                    <connections>
+                        <outlet property="newGameButton" destination="zBH-eB-J3x" id="OMT-4K-a1c"/>
+                        <outlet property="tableView" destination="5W3-rj-2T0" id="mpX-xP-JIa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1088" y="745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Bdu-Vn-HSX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QJS-Se-pps" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jnm-ae-5Ga">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="JvM-KM-HkO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FgH-7y-GYH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="744.64285714285711"/>
+        </scene>
+    </scenes>
+</document>
