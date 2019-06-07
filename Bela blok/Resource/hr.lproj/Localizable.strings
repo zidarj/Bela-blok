@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  Bela blok
+
+  Created by Josip Zidar on 07/06/2019.
+  Copyright © 2019 Josip Zidar. All rights reserved.
+*/
+"bela_blok" = "Bela blok";
+
+"rules" = "Pravila";

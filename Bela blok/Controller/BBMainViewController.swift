@@ -20,10 +20,14 @@ class BBMainViewController: BBViewController {
         title = "bela_blok".localized()
         navigationItem.leftBarButtonItems = [rulesBarButtonItem]
         navigationItem.rightBarButtonItems = [settingsBarButtonItem]
+        statusBarStyle = .lightContent
     }
 
     override func onTouchRulesButton() {
-        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        guard let vc = storyBoard.instantiateViewController(withIdentifier: "BBWebViewController") as? BBWebViewController, let url = URL(string: "https://google.com") else { return }
+        //vc.url = URLRequest(url: url)
+        navigationController?.pushViewController(vc, animated: true)
     }
     override func onTouchSettingsButton() {
         

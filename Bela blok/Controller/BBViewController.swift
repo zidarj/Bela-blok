@@ -11,6 +11,16 @@ import Localize_Swift
 
 class BBViewController: UIViewController {
     
+    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation { return .slide }
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask { return .portrait }
+    override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
+    
+    var statusBarStyle: UIStatusBarStyle = .lightContent {
+        didSet {
+            self.setNeedsStatusBarAppearanceUpdate()
+        }
+    }
+    
     private(set) lazy var settingsBarButtonItem: UIBarButtonItem = {
         return UIBarButtonItem(image: UIImage(named: "settings"), style: .done, target: self, action: #selector(onTouchSettingsButton))
     }()
@@ -18,12 +28,16 @@ class BBViewController: UIViewController {
         return UIBarButtonItem(image: UIImage(named: "rules"), style: .done, target: self, action: #selector(onTouchRulesButton))
     }()
     private(set) lazy var backBarButtonItem: UIBarButtonItem = {
-        return UIBarButtonItem(image: UIImage(named: "back_icon"), style: .done, target: self, action: #selector(onTouchBackButton))
+        return UIBarButtonItem(image: UIImage(named: "back_button"), style: .done, target: self, action: #selector(onTouchBackButton))
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-     
-        
+        setNeedsStatusBarAppearanceUpdate()
+        navigationItem.hidesBackButton = true
+        if navigationController?.viewControllers.count ?? 0 > 1 {
+            navigationItem.leftBarButtonItems = [backBarButtonItem]
+        }
+        navigationController?.interactivePopGestureRecognizer?.delegate = self
     }
     @objc func onTouchSettingsButton() {
         assertionFailure("Override")
@@ -32,7 +46,14 @@ class BBViewController: UIViewController {
         assertionFailure("Override")
     }
     @objc func onTouchBackButton() {
-        assertionFailure("Override")
+        navigationController?.popViewController(animated: true)
     }
 }
-
+extension BBViewController: UIGestureRecognizerDelegate {
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        guard let navigation = navigationController else {
+            return false
+        }
+        return navigation.viewControllers.count > 1
+    }
+}

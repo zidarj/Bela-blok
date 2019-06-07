@@ -17,7 +17,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        configDefaultAppearance()
+        
+        if UserDefaults.standard.object(forKey: "LCLCurrentLanguageKey") == nil {
+            Localize.setCurrentLanguage("hr")
+        }
         return true
+    }
+    
+    private func configDefaultAppearance() {
+        UINavigationBar.appearance().barTintColor = UIColor.red
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white,
+                                                            .font: UIFont.systemFont(ofSize: 18)]
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

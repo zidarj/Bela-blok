@@ -81,23 +81,7 @@
                     <view key="view" contentMode="scaleToFill" id="Mb8-FV-DU4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Dr-um-HUh">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="0Dr-um-HUh" firstAttribute="top" secondItem="Yzy-gi-icw" secondAttribute="top" id="9wU-Tr-xE7"/>
-                            <constraint firstItem="0Dr-um-HUh" firstAttribute="leading" secondItem="Yzy-gi-icw" secondAttribute="leading" id="9yV-6c-b5w"/>
-                            <constraint firstItem="Yzy-gi-icw" firstAttribute="bottom" secondItem="0Dr-um-HUh" secondAttribute="bottom" id="cJn-TI-yd4"/>
-                            <constraint firstItem="Yzy-gi-icw" firstAttribute="trailing" secondItem="0Dr-um-HUh" secondAttribute="trailing" id="gfK-Z3-rSV"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Yzy-gi-icw"/>
                     </view>
                 </viewController>
