@@ -10,21 +10,66 @@ import UIKit
 
 class BBSettingsViewController: BBViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var holderView: BBView!
+    enum Settings: Int {
+        case language
+        case deleteData
+        case game
+        case contact
+        case doublePount
+        case activeScreen
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupUI()
+        setupHolder()
+    }
+    private func setupUI() {
+        title = "settings".localized()
+        tableView.registerNib(BBBaseTableViewCell.self)
+    }
+    private func setupHolder() {
+        holderView.initHolderView()
+        tableView.layer.cornerRadius = 20
+    }
+
+}
+extension BBSettingsViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 6
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch Settings.init(rawValue: indexPath.row)! {
+        case .contact:
+            let cell: BBBaseTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.config(title: "contact".localized())
+            return cell
+        case .deleteData:
+            let cell: BBBaseTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.config(title: "delete_data".localized())
+            return cell
+        case .game:
+            let cell: BBBaseTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.config(title: "game".localized())
+            return cell
+        case .language:
+            let cell: BBBaseTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.config(title: "language".localized())
+            return cell
+        case .activeScreen:
+            break
+        case .doublePount:
+            break
+            
+        }
+        let cell = UITableViewCell()
+        cell.textLabel?.text = String(indexPath.row)
+        return cell
     }
-    */
-
+    
+    
+    
 }

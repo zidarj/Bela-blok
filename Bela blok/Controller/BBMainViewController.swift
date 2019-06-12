@@ -25,12 +25,13 @@ class BBMainViewController: BBViewController {
 
     override func onTouchRulesButton() {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        guard let vc = storyBoard.instantiateViewController(withIdentifier: "BBWebViewController") as? BBWebViewController, let url = URL(string: "https://google.com") else { return }
-        //vc.url = URLRequest(url: url)
+        guard let vc = storyBoard.instantiateViewController(withIdentifier: "BBWebViewController") as? BBWebViewController else { return }
         navigationController?.pushViewController(vc, animated: true)
     }
     override func onTouchSettingsButton() {
-        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        guard let vc = storyBoard.instantiateViewController(withIdentifier: "BBSettingsViewController") as? BBSettingsViewController else { return }
+        navigationController?.pushViewController(vc, animated: true)
     }
 
 }

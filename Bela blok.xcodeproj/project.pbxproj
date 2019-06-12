@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E318D7622AFC5EE001B9F1C /* BBBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E318D7422AFC5EE001B9F1C /* BBBaseTableViewCell.swift */; };
+		7E318D7722AFC5EE001B9F1C /* BBBaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E318D7522AFC5EE001B9F1C /* BBBaseTableViewCell.xib */; };
+		7E318D7922AFC816001B9F1C /* BBReuseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E318D7822AFC816001B9F1C /* BBReuseHelper.swift */; };
+		7EAB528522B0D99E004222B6 /* BBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAB528422B0D99E004222B6 /* BBView.swift */; };
 		7ED7EE9F22AA4A58009FB305 /* BBSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED7EE9E22AA4A58009FB305 /* BBSettingsViewController.swift */; };
 		7ED7EEA122AA4B36009FB305 /* BBWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED7EEA022AA4B36009FB305 /* BBWebViewController.swift */; };
 		7ED7EEA322AA4C1C009FB305 /* BBMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED7EEA222AA4C1C009FB305 /* BBMainViewController.swift */; };
@@ -22,6 +26,10 @@
 /* Begin PBXFileReference section */
 		1B8CB2E60F5C80D8915A2D3B /* Pods-Bela blok.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bela blok.release.xcconfig"; path = "Target Support Files/Pods-Bela blok/Pods-Bela blok.release.xcconfig"; sourceTree = "<group>"; };
 		46C8A192474B6F53473C9745 /* Pods-Bela blok.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bela blok.debug.xcconfig"; path = "Target Support Files/Pods-Bela blok/Pods-Bela blok.debug.xcconfig"; sourceTree = "<group>"; };
+		7E318D7422AFC5EE001B9F1C /* BBBaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBBaseTableViewCell.swift; sourceTree = "<group>"; };
+		7E318D7522AFC5EE001B9F1C /* BBBaseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBBaseTableViewCell.xib; sourceTree = "<group>"; };
+		7E318D7822AFC816001B9F1C /* BBReuseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BBReuseHelper.swift; path = "Bela blok/View/BBReuseHelper.swift"; sourceTree = SOURCE_ROOT; };
+		7EAB528422B0D99E004222B6 /* BBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BBView.swift; path = "Bela blok/Model/BBView.swift"; sourceTree = SOURCE_ROOT; };
 		7ED7EE9E22AA4A58009FB305 /* BBSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBSettingsViewController.swift; sourceTree = "<group>"; };
 		7ED7EEA022AA4B36009FB305 /* BBWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBWebViewController.swift; sourceTree = "<group>"; };
 		7ED7EEA222AA4C1C009FB305 /* BBMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBMainViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +61,8 @@
 		7ED7EE9A22AA47B6009FB305 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7E318D7822AFC816001B9F1C /* BBReuseHelper.swift */,
+				7EAB528422B0D99E004222B6 /* BBView.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -60,6 +70,8 @@
 		7ED7EE9B22AA47C5009FB305 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7E318D7422AFC5EE001B9F1C /* BBBaseTableViewCell.swift */,
+				7E318D7522AFC5EE001B9F1C /* BBBaseTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -197,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EDC9BA9229E81C700A9C21C /* LaunchScreen.storyboard in Resources */,
+				7E318D7722AFC5EE001B9F1C /* BBBaseTableViewCell.xib in Resources */,
 				7ED7EEAA22AA5226009FB305 /* Localizable.strings in Resources */,
 				7EDC9BA6229E81C700A9C21C /* Assets.xcassets in Resources */,
 				7EDC9BA4229E81C500A9C21C /* Main.storyboard in Resources */,
@@ -257,10 +270,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E318D7922AFC816001B9F1C /* BBReuseHelper.swift in Sources */,
 				7ED7EE9F22AA4A58009FB305 /* BBSettingsViewController.swift in Sources */,
 				7ED7EEA122AA4B36009FB305 /* BBWebViewController.swift in Sources */,
+				7E318D7622AFC5EE001B9F1C /* BBBaseTableViewCell.swift in Sources */,
 				7EDC9BA1229E81C500A9C21C /* BBViewController.swift in Sources */,
 				7EDC9B9F229E81C500A9C21C /* AppDelegate.swift in Sources */,
+				7EAB528522B0D99E004222B6 /* BBView.swift in Sources */,
 				7ED7EEA322AA4C1C009FB305 /* BBMainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

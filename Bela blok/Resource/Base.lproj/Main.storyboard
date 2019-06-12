@@ -66,9 +66,41 @@
                     <view key="view" contentMode="scaleToFill" id="7sJ-tf-N6h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8wD-jc-Tos" customClass="BBView" customModule="Bela_blok" customModuleProvider="target">
+                                <rect key="frame" x="20" y="64" width="374" height="778"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oVJ-s6-m2x">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="778"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="xUR-j0-AbE" id="BnL-tC-FfR"/>
+                                            <outlet property="delegate" destination="xUR-j0-AbE" id="pTw-ot-mNh"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="oVJ-s6-m2x" firstAttribute="leading" secondItem="8wD-jc-Tos" secondAttribute="leading" id="Ge8-AW-7xk"/>
+                                    <constraint firstAttribute="trailing" secondItem="oVJ-s6-m2x" secondAttribute="trailing" id="UW0-PD-1vl"/>
+                                    <constraint firstAttribute="bottom" secondItem="oVJ-s6-m2x" secondAttribute="bottom" id="wE1-D8-63d"/>
+                                    <constraint firstItem="oVJ-s6-m2x" firstAttribute="top" secondItem="8wD-jc-Tos" secondAttribute="top" id="wxC-9v-QaU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VGX-3F-baP" firstAttribute="bottom" secondItem="8wD-jc-Tos" secondAttribute="bottom" constant="20" id="0Ac-Jb-Vop"/>
+                            <constraint firstItem="VGX-3F-baP" firstAttribute="trailing" secondItem="8wD-jc-Tos" secondAttribute="trailing" constant="20" id="Crf-zo-eY7"/>
+                            <constraint firstItem="8wD-jc-Tos" firstAttribute="top" secondItem="VGX-3F-baP" secondAttribute="top" constant="20" id="EnB-Er-YHN"/>
+                            <constraint firstItem="8wD-jc-Tos" firstAttribute="leading" secondItem="VGX-3F-baP" secondAttribute="leading" constant="20" id="KYs-54-ETu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="VGX-3F-baP"/>
                     </view>
+                    <connections>
+                        <outlet property="holderView" destination="8wD-jc-Tos" id="oqw-ml-S0y"/>
+                        <outlet property="tableView" destination="oVJ-s6-m2x" id="KIL-VY-xCu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a8U-K4-rVF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
