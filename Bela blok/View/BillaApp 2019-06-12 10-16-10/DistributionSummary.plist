@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BillaApp.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>armv7</string>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>F6CB04E58FF4B5EBED91A808D25C8C3BE24E7AFC</string>
+				<key>dateExpires</key>
+				<string>07/04/2020</string>
+				<key>type</key>
+				<string>iOS Distribution</string>
+			</dict>
+			<key>embeddedBinaries</key>
+			<array>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>F6CB04E58FF4B5EBED91A808D25C8C3BE24E7AFC</string>
+						<key>dateExpires</key>
+						<string>07/04/2020</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>AFNetworking.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>XTCRW6SJ7J</string>
+						<key>name</key>
+						<string>Nisni medijski sadrzaji d.o.o. za nakladnicku djelatnost</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>F6CB04E58FF4B5EBED91A808D25C8C3BE24E7AFC</string>
+						<key>dateExpires</key>
+						<string>07/04/2020</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>GoogleUtilities.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>XTCRW6SJ7J</string>
+						<key>name</key>
+						<string>Nisni medijski sadrzaji d.o.o. za nakladnicku djelatnost</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>F6CB04E58FF4B5EBED91A808D25C8C3BE24E7AFC</string>
+						<key>dateExpires</key>
+						<string>07/04/2020</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>IQKeyboardManager.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>XTCRW6SJ7J</string>
+						<key>name</key>
+						<string>Nisni medijski sadrzaji d.o.o. za nakladnicku djelatnost</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>F6CB04E58FF4B5EBED91A808D25C8C3BE24E7AFC</string>
+						<key>dateExpires</key>
+						<string>07/04/2020</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>Localize_Swift.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>XTCRW6SJ7J</string>
+						<key>name</key>
+						<string>Nisni medijski sadrzaji d.o.o. za nakladnicku djelatnost</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>F6CB04E58FF4B5EBED91A808D25C8C3BE24E7AFC</string>
+						<key>dateExpires</key>
+						<string>07/04/2020</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>Rswift.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>XTCRW6SJ7J</string>
+						<key>name</key>
+						<string>Nisni medijski sadrzaji d.o.o. za nakladnicku djelatnost</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>F6CB04E58FF4B5EBED91A808D25C8C3BE24E7AFC</string>
+						<key>dateExpires</key>
+						<string>07/04/2020</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>SDWebImage.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>XTCRW6SJ7J</string>
+						<key>name</key>
+						<string>Nisni medijski sadrzaji d.o.o. za nakladnicku djelatnost</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>F6CB04E58FF4B5EBED91A808D25C8C3BE24E7AFC</string>
+						<key>dateExpires</key>
+						<string>07/04/2020</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>nanopb.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>XTCRW6SJ7J</string>
+						<key>name</key>
+						<string>Nisni medijski sadrzaji d.o.o. za nakladnicku djelatnost</string>
+					</dict>
+				</dict>
+			</array>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>XTCRW6SJ7J.hr.com.nisa.BillaApp</string>
+				<key>aps-environment</key>
+				<string>production</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>XTCRW6SJ7J</string>
+				<key>get-task-allow</key>
+				<false/>
+			</dict>
+			<key>name</key>
+			<string>Spar Dobar tek.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>f2e9a6ea-c6fb-48fd-a76a-03cbd8228ee4</string>
+				<key>name</key>
+				<string>SparAdHoc</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>XTCRW6SJ7J</string>
+				<key>name</key>
+				<string>Nisni medijski sadrzaji d.o.o. za nakladnicku djelatnost</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

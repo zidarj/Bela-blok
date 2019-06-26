@@ -22,6 +22,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if UserDefaults.standard.object(forKey: "LCLCurrentLanguageKey") == nil {
             Localize.setCurrentLanguage("hr")
         }
+        if let settings = getSettings() {
+            if settings.isActiveScreen {
+                UIApplication.shared.isIdleTimerDisabled = true
+            }else {
+                UIApplication.shared.isIdleTimerDisabled = false
+            }
+        }
         return true
     }
     

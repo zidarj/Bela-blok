@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  Bela blok
+
+  Created by Josip Zidar on 26/06/2019.
+  Copyright © 2019 Josip Zidar. All rights reserved.
+*/
+"bela_blok" = "Bela blok";
+
+"rules" = "Rules";
+
+"settings" = "Settings";
+
+"contact" = "Contact";
+
+"delete_data" = "Clear cache";
+
+"game" = "Game";
+
+"language" = "Language";
+
+"double_point" = "Double points";
+
+"active_screen" = "Active screen";
+
+"croatia" = "Croatian";
+
+"english" = "English";
