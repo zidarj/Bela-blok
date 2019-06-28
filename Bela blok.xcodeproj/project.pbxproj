@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E27B9BF22C5F2DE00EC29BE /* BBGameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E27B9BD22C5F2DE00EC29BE /* BBGameTableViewCell.swift */; };
+		7E27B9C022C5F2DE00EC29BE /* BBGameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E27B9BE22C5F2DE00EC29BE /* BBGameTableViewCell.xib */; };
 		7E318D7622AFC5EE001B9F1C /* BBBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E318D7422AFC5EE001B9F1C /* BBBaseTableViewCell.swift */; };
 		7E318D7722AFC5EE001B9F1C /* BBBaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E318D7522AFC5EE001B9F1C /* BBBaseTableViewCell.xib */; };
 		7E318D7922AFC816001B9F1C /* BBReuseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E318D7822AFC816001B9F1C /* BBReuseHelper.swift */; };
@@ -29,6 +31,8 @@
 /* Begin PBXFileReference section */
 		1B8CB2E60F5C80D8915A2D3B /* Pods-Bela blok.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bela blok.release.xcconfig"; path = "Target Support Files/Pods-Bela blok/Pods-Bela blok.release.xcconfig"; sourceTree = "<group>"; };
 		46C8A192474B6F53473C9745 /* Pods-Bela blok.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bela blok.debug.xcconfig"; path = "Target Support Files/Pods-Bela blok/Pods-Bela blok.debug.xcconfig"; sourceTree = "<group>"; };
+		7E27B9BD22C5F2DE00EC29BE /* BBGameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBGameTableViewCell.swift; sourceTree = "<group>"; };
+		7E27B9BE22C5F2DE00EC29BE /* BBGameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBGameTableViewCell.xib; sourceTree = "<group>"; };
 		7E30EDCC22C3A2A1007EFEB9 /* hr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hr; path = hr.lproj/Main.strings; sourceTree = "<group>"; };
 		7E30EDDD22C3A407007EFEB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		7E30EDDE22C3A407007EFEB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 				7E318D7522AFC5EE001B9F1C /* BBBaseTableViewCell.xib */,
 				7EAB528622B0E6C0004222B6 /* BBCheckboxTableViewCell.swift */,
 				7EAB528722B0E6C0004222B6 /* BBCheckboxTableViewCell.xib */,
+				7E27B9BD22C5F2DE00EC29BE /* BBGameTableViewCell.swift */,
+				7E27B9BE22C5F2DE00EC29BE /* BBGameTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -226,6 +232,7 @@
 				7EDC9BA6229E81C700A9C21C /* Assets.xcassets in Resources */,
 				7EAB528922B0E6C0004222B6 /* BBCheckboxTableViewCell.xib in Resources */,
 				7EDC9BA4229E81C500A9C21C /* Main.storyboard in Resources */,
+				7E27B9C022C5F2DE00EC29BE /* BBGameTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +296,7 @@
 				7E318D7622AFC5EE001B9F1C /* BBBaseTableViewCell.swift in Sources */,
 				7EDC9BA1229E81C500A9C21C /* BBViewController.swift in Sources */,
 				7EDC9B9F229E81C500A9C21C /* AppDelegate.swift in Sources */,
+				7E27B9BF22C5F2DE00EC29BE /* BBGameTableViewCell.swift in Sources */,
 				7EAB528B22B0FB53004222B6 /* BBSettings.swift in Sources */,
 				7EAB528522B0D99E004222B6 /* BBView.swift in Sources */,
 				7ED7EEA322AA4C1C009FB305 /* BBMainViewController.swift in Sources */,

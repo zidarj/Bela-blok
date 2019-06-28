@@ -40,9 +40,9 @@ func getSettings() -> BBSettings? {
     }
     return nil
 }
-func defaultSettings() {
+func defaultSettings() -> BBSettings {
     if UserDefaults.standard.dictionary(forKey: "BBSettings") != nil {
     UserDefaults.standard.removeObject(forKey: "BBSettings")
     }
-    BBSettings.init()
+    return BBSettings()
 }

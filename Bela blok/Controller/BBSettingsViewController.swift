@@ -9,7 +9,7 @@
 import UIKit
 import Localize_Swift
 class BBSettingsViewController: BBViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var holderView: BBView!
     enum Settings: Int {
@@ -19,19 +19,20 @@ class BBSettingsViewController: BBViewController {
         case doublePount
         case activeScreen
         case contact
+        case defaultSettings
     }
     
     var settings: BBSettings = {
-            if let value = getSettings() {
-                return value
-            }else {
-                return BBSettings()
-            }
+        if let value = getSettings() {
+            return value
+        }else {
+            return BBSettings()
+        }
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupUI()
         setupHolder()
     }
@@ -46,6 +47,7 @@ class BBSettingsViewController: BBViewController {
         title = "settings".localized()
         tableView.registerNib(BBBaseTableViewCell.self)
         tableView.registerNib(BBCheckboxTableViewCell.self)
+        tableView.registerNib(BBGameTableViewCell.self)
         
     }
     private func setupHolder() {
@@ -57,11 +59,11 @@ class BBSettingsViewController: BBViewController {
         title = "settings".localized()
     }
     
-
+    
 }
 extension BBSettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return 7
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -75,8 +77,8 @@ extension BBSettingsViewController: UITableViewDelegate, UITableViewDataSource {
             cell.config(title: "delete_data".localized())
             return cell
         case .game:
-            let cell: BBBaseTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-            cell.config(title: "game".localized())
+            let cell: BBGameTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.config(title: "game".localized(), gameNumber: settings.game)
             return cell
         case .language:
             let cell: BBBaseTableViewCell = tableView.dequeueReusableCell(for: indexPath)
@@ -92,7 +94,10 @@ extension BBSettingsViewController: UITableViewDelegate, UITableViewDataSource {
             cell.config(title: "double_point".localized())
             cell.isChecked(state: settings.isDoublePoint)
             return cell
-            
+        case .defaultSettings:
+            let cell: BBBaseTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.config(title: "default_settings".localized())
+            return cell
         }
     }
     
@@ -116,7 +121,7 @@ extension BBSettingsViewController: UITableViewDelegate, UITableViewDataSource {
             alertController.view.addSubview(pickerView)
             
             let ok = UIAlertAction(title: "ok", style: .default, handler: { (_) in
-               let selectedLanguage = pickerView.selectedRow(inComponent: 0)
+                let selectedLanguage = pickerView.selectedRow(inComponent: 0)
                 if selectedLanguage == 0 {
                     Localize.setCurrentLanguage("hr")
                     self.reload()
@@ -136,6 +141,9 @@ extension BBSettingsViewController: UITableViewDelegate, UITableViewDataSource {
         case .activeScreen:
             settings.isActiveScreen = settings.isActiveScreen ? false : true
             tableView.reloadRows(at: [indexPath], with: .automatic)
+        case .defaultSettings:
+            settings = defaultSettings()
+            self.tableView.reloadData()
         }
     }
     
@@ -149,7 +157,7 @@ extension BBSettingsViewController: UIPickerViewDelegate, UIPickerViewDataSource
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return 2
     }
-
+    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if row == 0 {
             return "croatia".localized()
