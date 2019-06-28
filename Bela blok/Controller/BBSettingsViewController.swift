@@ -87,6 +87,7 @@ extension BBSettingsViewController: UITableViewDelegate, UITableViewDataSource {
         case .activeScreen:
             let cell: BBCheckboxTableViewCell = tableView.dequeueReusableCell(for: indexPath)
             cell.config(title: "active_screen".localized())
+            UIApplication.shared.isIdleTimerDisabled = settings.isActiveScreen
             cell.isChecked(state: settings.isActiveScreen)
             return cell
         case .doublePount:
@@ -108,7 +109,18 @@ extension BBSettingsViewController: UITableViewDelegate, UITableViewDataSource {
         case .deleteData:
             break
         case .game:
-            break
+            let alertController = UIAlertController(title: "game".localized().uppercased(), message: "", preferredStyle: .alert)
+            alertController.addTextField { (textField) in
+                textField.text = "\(self.settings.game)"
+                textField.keyboardType = .numberPad
+            }
+            let submitAction = UIAlertAction(title: "submit".localized().uppercased(), style: .default) { [unowned alertController] _ in
+                let answer = alertController.textFields![0]
+                self.storeGame(textField: answer)
+                tableView.reloadRows(at: [indexPath], with: .automatic)
+            }
+            alertController.addAction(submitAction)
+            present(alertController, animated: true)
         case .language:
             let alertController = UIAlertController(title: "select_language".localized(), message: "\n\n\n\n\n\n", preferredStyle: .alert)
             
@@ -147,6 +159,17 @@ extension BBSettingsViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    private func storeGame(textField: UITextField) {
+        if textField.text!.isEmpty {
+            return
+        }
+        guard let number = Int(textField.text!) else { return }
+        if number <= 1001 && number >= 1 {
+            settings.game = number
+        }else {
+            return
+        }
+    }
     
 }
 extension BBSettingsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
