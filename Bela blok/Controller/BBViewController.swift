@@ -48,6 +48,9 @@ class BBViewController: UIViewController {
     @objc func onTouchBackButton() {
         navigationController?.popViewController(animated: true)
     }
+    deinit {
+        print("Deinit: \(self)")
+    }
 }
 extension BBViewController: UIGestureRecognizerDelegate {
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {

@@ -27,5 +27,8 @@ class BBWebViewController: BBViewController {
         webView.load(urlRequest)
         view.addSubview(webView)
     }
+    deinit {
+        webView = nil
+    }
 }
 

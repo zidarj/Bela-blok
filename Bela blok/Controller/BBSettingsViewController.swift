@@ -10,9 +10,12 @@ import UIKit
 import Localize_Swift
 class BBSettingsViewController: BBViewController {
     
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var holderView: BBView!
-    enum Settings: Int {
+    //MARK: - IBOutlets
+    @IBOutlet weak private var tableView: UITableView!
+    @IBOutlet weak private var holderView: BBView!
+    
+    //MARK: - Enum
+    private enum Settings: Int {
         case language
         case deleteData
         case game
@@ -22,7 +25,8 @@ class BBSettingsViewController: BBViewController {
         case defaultSettings
     }
     
-    var settings: BBSettings = {
+    //MARK: - Variables
+    private var settings: BBSettings = {
         if let value = getSettings() {
             return value
         }else {
@@ -30,12 +34,14 @@ class BBSettingsViewController: BBViewController {
         }
     }()
     
+    //MARK: - LifeCycle app
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
         setupHolder()
     }
+    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         let test: BBSettings = getSettings() ?? BBSettings()
@@ -43,6 +49,8 @@ class BBSettingsViewController: BBViewController {
             storeSettings(settings: settings)
         }
     }
+    
+    //MARK: - Functions
     private func setupUI() {
         title = "settings".localized()
         tableView.registerNib(BBBaseTableViewCell.self)
@@ -50,17 +58,32 @@ class BBSettingsViewController: BBViewController {
         tableView.registerNib(BBGameTableViewCell.self)
         
     }
+    
     private func setupHolder() {
         holderView.initHolderView()
         tableView.layer.cornerRadius = 20
     }
     
-    func reload() {
+    private func storeGame(textField: UITextField) {
+        if textField.text!.isEmpty {
+            return
+        }
+        guard let number = Int(textField.text!) else { return }
+        if number <= 1001 && number >= 1 {
+            settings.game = number
+        }else {
+            return
+        }
+    }
+    
+    private func reload() {
         title = "settings".localized()
     }
     
     
 }
+
+//MARK: - UITableViewDelegate, UITableViewDataSource
 extension BBSettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 7
@@ -158,20 +181,9 @@ extension BBSettingsViewController: UITableViewDelegate, UITableViewDataSource {
             self.tableView.reloadData()
         }
     }
-    
-    private func storeGame(textField: UITextField) {
-        if textField.text!.isEmpty {
-            return
-        }
-        guard let number = Int(textField.text!) else { return }
-        if number <= 1001 && number >= 1 {
-            settings.game = number
-        }else {
-            return
-        }
-    }
-    
 }
+
+//MARK: - UIPickerViewDelegate, UIPickerViewDataSource
 extension BBSettingsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1

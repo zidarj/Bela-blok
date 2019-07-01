@@ -25,6 +25,9 @@
                                     <constraint firstAttribute="height" constant="100" id="pdi-nt-ByB"/>
                                 </constraints>
                                 <state key="normal" title="Nova igra"/>
+                                <connections>
+                                    <action selector="onTouchNewGameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pd8-RS-IMf"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vca-x6-Q4s">
                                 <rect key="frame" x="0.0" y="662" width="414" height="100"/>
@@ -78,6 +81,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1087" y="745"/>
+        </scene>
+        <!--New Game View Controller-->
+        <scene sceneID="zif-jQ-Sg5">
+            <objects>
+                <viewController storyboardIdentifier="BBNewGameViewController" id="ulp-6a-mJ8" customClass="BBNewGameViewController" customModule="Bela_blok" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vpN-Rg-bXl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="eBo-pE-hAb"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="exE-Ej-hjF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1116" y="1459"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="NIY-xV-gwq">
