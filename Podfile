@@ -6,5 +6,6 @@ target 'Bela blok' do
   use_frameworks!
 
   pod 'Localize-Swift'
+  pod 'Firebase/Core'
 
 end

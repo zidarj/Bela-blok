@@ -19,6 +19,7 @@
 		7E33F7BE22CA1BAF00A9A24C /* BBGameMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E33F7BC22CA1BAF00A9A24C /* BBGameMainTableViewCell.swift */; };
 		7E33F7BF22CA1BAF00A9A24C /* BBGameMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E33F7BD22CA1BAF00A9A24C /* BBGameMainTableViewCell.xib */; };
 		7E33F7C122CA1F5600A9A24C /* BBNewGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E33F7C022CA1F5600A9A24C /* BBNewGameViewController.swift */; };
+		7E3B6CBB22CCE07A00A7BE49 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E3B6CBA22CCE07A00A7BE49 /* GoogleService-Info.plist */; };
 		7EAB528522B0D99E004222B6 /* BBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAB528422B0D99E004222B6 /* BBView.swift */; };
 		7EAB528822B0E6C0004222B6 /* BBCheckboxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAB528622B0E6C0004222B6 /* BBCheckboxTableViewCell.swift */; };
 		7EAB528922B0E6C0004222B6 /* BBCheckboxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EAB528722B0E6C0004222B6 /* BBCheckboxTableViewCell.xib */; };
@@ -54,6 +55,7 @@
 		7E33F7BC22CA1BAF00A9A24C /* BBGameMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBGameMainTableViewCell.swift; sourceTree = "<group>"; };
 		7E33F7BD22CA1BAF00A9A24C /* BBGameMainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBGameMainTableViewCell.xib; sourceTree = "<group>"; };
 		7E33F7C022CA1F5600A9A24C /* BBNewGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBNewGameViewController.swift; sourceTree = "<group>"; };
+		7E3B6CBA22CCE07A00A7BE49 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7EAB528422B0D99E004222B6 /* BBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BBView.swift; path = "Bela blok/Model/BBView.swift"; sourceTree = SOURCE_ROOT; };
 		7EAB528622B0E6C0004222B6 /* BBCheckboxTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCheckboxTableViewCell.swift; sourceTree = "<group>"; };
 		7EAB528722B0E6C0004222B6 /* BBCheckboxTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBCheckboxTableViewCell.xib; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 		7ED7EE9D22AA482A009FB305 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				7E3B6CBA22CCE07A00A7BE49 /* GoogleService-Info.plist */,
 				7EDC9B9E229E81C500A9C21C /* AppDelegate.swift */,
 				7EDC9BA2229E81C500A9C21C /* Main.storyboard */,
 				7EDC9BA7229E81C700A9C21C /* LaunchScreen.storyboard */,
@@ -254,6 +257,7 @@
 				7EDC9BA6229E81C700A9C21C /* Assets.xcassets in Resources */,
 				7E33F7BF22CA1BAF00A9A24C /* BBGameMainTableViewCell.xib in Resources */,
 				7EAB528922B0E6C0004222B6 /* BBCheckboxTableViewCell.xib in Resources */,
+				7E3B6CBB22CCE07A00A7BE49 /* GoogleService-Info.plist in Resources */,
 				7EDC9BA4229E81C500A9C21C /* Main.storyboard in Resources */,
 				7E27B9C022C5F2DE00EC29BE /* BBGameTableViewCell.xib in Resources */,
 			);
@@ -271,13 +275,17 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Bela blok/Pods-Bela blok-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Localize-Swift/Localize_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Localize_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

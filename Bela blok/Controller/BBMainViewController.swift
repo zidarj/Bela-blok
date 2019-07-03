@@ -12,13 +12,24 @@ class BBMainViewController: BBViewController {
 
     @IBOutlet weak var holderView: BBView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var gameRule: UILabel!
+    @IBOutlet weak var miLabelScore: UILabel!
+    @IBOutlet weak var viLabelScore: UILabel!
+    @IBOutlet weak var miScore: UILabel!
+    @IBOutlet weak var viScore: UILabel!
+    
     var header: BBHeaderView = .fromNib()
     var games: [BBGame] = [BBGame]()
+    
+    private var settings: BBSettings?
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setScoreLabels()
         // Do any additional setup after loading the view.
     }
+    
+    
     
     private func setupUI() {
         
@@ -31,6 +42,15 @@ class BBMainViewController: BBViewController {
         tableView.registerNib(BBGameMainTableViewCell.self)
         
     }
+    private func setScoreLabels() {
+        if let sett = getSettings() {
+            settings = sett
+        }else {
+            settings = BBSettings()
+        }
+        gameRule.text = String(describing: settings!.game)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         title = "bela_blok".localized()
     }

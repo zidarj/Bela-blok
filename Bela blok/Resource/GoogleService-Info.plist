@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>955337682685-4qrohdh3u04osugvg54o57t3uhh1avqi.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.955337682685-4qrohdh3u04osugvg54o57t3uhh1avqi</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCio0cpJSlUcuxSjr83SAuuOyQDLz7TYNs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>955337682685</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>belablok.Bela-blok</string>
+	<key>PROJECT_ID</key>
+	<string>bela-blok</string>
+	<key>STORAGE_BUCKET</key>
+	<string>bela-blok.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:955337682685:ios:24c57fc4132c3525</string>
+	<key>DATABASE_URL</key>
+	<string>https://bela-blok.firebaseio.com</string>
+</dict>
+</plist>

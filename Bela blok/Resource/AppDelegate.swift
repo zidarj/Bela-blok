@@ -8,6 +8,7 @@
 
 import UIKit
 import Localize_Swift
+import FirebaseCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,6 +30,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 UIApplication.shared.isIdleTimerDisabled = false
             }
         }
+        #if DEBUG
+        //FirebaseApp.configure()
+        #endif
         return true
     }
     
