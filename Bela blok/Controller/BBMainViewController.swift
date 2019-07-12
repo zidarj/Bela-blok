@@ -39,7 +39,11 @@ class BBMainViewController: BBViewController {
             guard let welf = self else { return }
             welf.finalResultVi = 0
             welf.finalResultMi = 0
+            welf.viScore.text = "\(welf.finalResultVi)"
+            welf.miScore.text = "\(welf.finalResultMi)"
             welf.games.removeAll()
+            welf.setupScoreView()
+            
         }
         // Do any additional setup after loading the view.
     }
