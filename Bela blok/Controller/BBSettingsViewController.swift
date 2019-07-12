@@ -48,6 +48,7 @@ class BBSettingsViewController: BBViewController {
         if test != settings {
             storeSettings(settings: settings)
         }
+        NotificationCenter.default.post(.init(name: .ScoreLabel))
     }
     
     //MARK: - Functions
@@ -130,7 +131,7 @@ extension BBSettingsViewController: UITableViewDelegate, UITableViewDataSource {
         case .contact:
             break
         case .deleteData:
-            break
+            NotificationCenter.default.post(name: .deleteData, object: nil)
         case .game:
             let alertController = UIAlertController(title: "game".localized().uppercased(), message: "", preferredStyle: .alert)
             alertController.addTextField { (textField) in

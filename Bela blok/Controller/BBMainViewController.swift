@@ -7,9 +7,12 @@
 //
 
 import UIKit
-
+extension Notification.Name {
+    static let ScoreLabel = Notification.Name("ScoreLable")
+    static let deleteData = Notification.Name("DeleteData")
+}
 class BBMainViewController: BBViewController {
-
+    
     @IBOutlet weak var holderView: BBView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var gameRule: UILabel!
@@ -20,12 +23,24 @@ class BBMainViewController: BBViewController {
     
     var header: BBHeaderView = .fromNib()
     var games: [BBGame] = [BBGame]()
-    
+    var finalResultMi = 0
+    var finalResultVi = 0
     private var settings: BBSettings?
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         setScoreLabels()
+        setupScoreView()
+        NotificationCenter.default.addObserver(forName: .ScoreLabel, object: nil, queue: nil) { [weak self] (_) in
+            guard let welf = self else { return }
+            welf.setScoreLabels()
+        }
+        NotificationCenter.default.addObserver(forName: .deleteData, object: nil, queue: nil) { [weak self](_) in
+            guard let welf = self else { return }
+            welf.finalResultVi = 0
+            welf.finalResultMi = 0
+            welf.games.removeAll()
+        }
         // Do any additional setup after loading the view.
     }
     
@@ -42,6 +57,36 @@ class BBMainViewController: BBViewController {
         tableView.registerNib(BBGameMainTableViewCell.self)
         
     }
+    
+    private func setupScoreView() {
+        var miResult = 0
+        var viResult = 0
+        games.forEach { (game) in
+            miResult += game.miResult()
+            viResult += game.viResult()
+        }
+        if miResult >= settings?.game ?? 1001 || viResult >= settings?.game ?? 1001 {
+            if miResult == viResult {
+                print("finalRound")
+                return
+            }else if miResult > viResult {
+                finalResultMi += (settings!.game / 2) > viResult && settings!.isDoublePoint ? 2 : 1
+                miScore.text = "\(finalResultMi)"
+            }else if viResult > miResult {
+                finalResultVi += (settings!.game / 2) > miResult && settings!.isDoublePoint ? 2 : 1
+                viScore.text = "\(finalResultVi)"
+            }
+            miLabelScore.text = "0"
+            viLabelScore.text = "0"
+            games.removeAll()
+            tableView.reloadData()
+            return
+        }
+        miLabelScore.text = "\(miResult)"
+        viLabelScore.text = "\(viResult)"
+        tableView.reloadData()
+    }
+    
     private func setScoreLabels() {
         if let sett = getSettings() {
             settings = sett
@@ -67,7 +112,7 @@ class BBMainViewController: BBViewController {
     @IBAction func onTouchNewGameButton(_ sender: Any) {
         let vc: BBNewGameViewController = (UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BBNewGameViewController") as? BBNewGameViewController)!
         vc.delegate = self
-      navigationController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 }
@@ -90,7 +135,7 @@ extension BBMainViewController: UITableViewDelegate, UITableViewDataSource {
 extension BBMainViewController: BBNewGameDelegate {
     func endGame(game: BBGame) {
         games.append(game)
-        tableView.reloadData()
+        setupScoreView()
     }
     
     
