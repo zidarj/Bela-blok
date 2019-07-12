@@ -66,6 +66,7 @@ class BBMainViewController: BBViewController {
     }
     @IBAction func onTouchNewGameButton(_ sender: Any) {
         let vc: BBNewGameViewController = (UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BBNewGameViewController") as? BBNewGameViewController)!
+        vc.delegate = self
       navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -78,7 +79,7 @@ extension BBMainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: BBGameMainTableViewCell = tableView.dequeueReusableCell(for: indexPath)
         let score = games[indexPath.row]
-        cell.config(miScore: score.miScore, viScore: score.viScore)
+        cell.config(game: score)
         return cell
     }
     

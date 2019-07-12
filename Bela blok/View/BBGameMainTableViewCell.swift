@@ -23,8 +23,10 @@ class BBGameMainTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func config(miScore: Int, viScore: Int) {
-        miLabel.text = "\(miScore)"
-        viLabel.text = String(viScore)
+    func config(game: BBGame) {
+        let miResult = String(game.miScore + game.miZvanje)
+        miLabel.text = miResult
+        let viResult = String(game.viScore + game.viZvanje)
+        viLabel.text = viResult
     }
 }

@@ -10,10 +10,8 @@ import Foundation
 
 struct BBGame: Equatable {
     var miScore: Int
+    var miZvanje: Int
     var viScore: Int
-    
-    init(miScore: Int, viScore: Int) {
-        self.miScore = miScore
-        self.viScore = viScore
-    }
+    var viZvanje: Int
+
 }
