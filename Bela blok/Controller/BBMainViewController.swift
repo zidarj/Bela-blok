@@ -65,7 +65,7 @@ class BBMainViewController: BBViewController {
     }
     
     fileprivate func checkStoreInfo() {
-        if let info = getInfo() {
+        if let info = getStoredInfo() {
             self.miScore.text = "score".localized() + "\(info.miResult)"
             self.viScore.text = "score".localized() + "\(info.viResult)"
             finalResultVi = info.viResult

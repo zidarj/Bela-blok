@@ -14,7 +14,6 @@
 		7E318D7922AFC816001B9F1C /* BBReuseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E318D7822AFC816001B9F1C /* BBReuseHelper.swift */; };
 		7E33F7B522C9FF8800A9A24C /* BBHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E33F7B422C9FF8800A9A24C /* BBHeaderView.swift */; };
 		7E33F7B722C9FF9B00A9A24C /* BBHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E33F7B622C9FF9B00A9A24C /* BBHeaderView.xib */; };
-		7E33F7B922CA194500A9A24C /* BBScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E33F7B822CA194500A9A24C /* BBScore.swift */; };
 		7E33F7BB22CA199C00A9A24C /* BBGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E33F7BA22CA199C00A9A24C /* BBGame.swift */; };
 		7E33F7BE22CA1BAF00A9A24C /* BBGameMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E33F7BC22CA1BAF00A9A24C /* BBGameMainTableViewCell.swift */; };
 		7E33F7BF22CA1BAF00A9A24C /* BBGameMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E33F7BD22CA1BAF00A9A24C /* BBGameMainTableViewCell.xib */; };
@@ -51,7 +50,6 @@
 		7E318D7822AFC816001B9F1C /* BBReuseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BBReuseHelper.swift; path = "Bela blok/View/BBReuseHelper.swift"; sourceTree = SOURCE_ROOT; };
 		7E33F7B422C9FF8800A9A24C /* BBHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBHeaderView.swift; sourceTree = "<group>"; };
 		7E33F7B622C9FF9B00A9A24C /* BBHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBHeaderView.xib; sourceTree = "<group>"; };
-		7E33F7B822CA194500A9A24C /* BBScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBScore.swift; sourceTree = "<group>"; };
 		7E33F7BA22CA199C00A9A24C /* BBGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBGame.swift; sourceTree = "<group>"; };
 		7E33F7BC22CA1BAF00A9A24C /* BBGameMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBGameMainTableViewCell.swift; sourceTree = "<group>"; };
 		7E33F7BD22CA1BAF00A9A24C /* BBGameMainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBGameMainTableViewCell.xib; sourceTree = "<group>"; };
@@ -95,7 +93,6 @@
 				7E318D7822AFC816001B9F1C /* BBReuseHelper.swift */,
 				7EAB528422B0D99E004222B6 /* BBView.swift */,
 				7EAB528A22B0FB53004222B6 /* BBSettings.swift */,
-				7E33F7B822CA194500A9A24C /* BBScore.swift */,
 				7E33F7BA22CA199C00A9A24C /* BBGame.swift */,
 				7E87E5FF22E71EC500EFC869 /* BBStoreInfo.swift */,
 			);
@@ -324,7 +321,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E33F7B922CA194500A9A24C /* BBScore.swift in Sources */,
 				7E318D7922AFC816001B9F1C /* BBReuseHelper.swift in Sources */,
 				7ED7EE9F22AA4A58009FB305 /* BBSettingsViewController.swift in Sources */,
 				7ED7EEA122AA4B36009FB305 /* BBWebViewController.swift in Sources */,

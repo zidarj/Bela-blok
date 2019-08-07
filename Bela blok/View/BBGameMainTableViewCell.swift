@@ -9,9 +9,9 @@
 import UIKit
 
 class BBGameMainTableViewCell: UITableViewCell {
-    @IBOutlet weak var miLabel: UILabel!
-    @IBOutlet weak var viLabel: UILabel!
-    @IBOutlet weak var separatorView: UIView!
+    @IBOutlet private weak var miLabel: UILabel!
+    @IBOutlet private weak var viLabel: UILabel!
+    @IBOutlet private weak var separatorView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

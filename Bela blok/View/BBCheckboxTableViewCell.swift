@@ -10,10 +10,10 @@ import UIKit
 
 class BBCheckboxTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var checkboxImageView: UIImageView!
-    @IBOutlet weak var checkBoxView: UIView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var separatorView: UIView!
+    @IBOutlet private weak var checkboxImageView: UIImageView!
+    @IBOutlet private weak var checkBoxView: UIView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var separatorView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         checkBoxView.layer.cornerRadius = 3

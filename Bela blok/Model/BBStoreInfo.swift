@@ -30,7 +30,7 @@ func storeInfo(settings: BBStoreInfo) {
     UserDefaults.standard.set(propertylistSettings, forKey: "BBStoreInfo")
 }
 
-func getInfo() -> BBStoreInfo? {
+func getStoredInfo() -> BBStoreInfo? {
     if let propertylistSettings = UserDefaults.standard.dictionary(forKey: "BBStoreInfo") {
         return BBStoreInfo.init(dictionary: propertylistSettings)
     }

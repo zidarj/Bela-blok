@@ -10,8 +10,8 @@ import UIKit
 
 class BBGameTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var numberLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

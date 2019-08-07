@@ -7,28 +7,37 @@
 //
 
 import UIKit
+//MARK: - BBNewGameDelegate
 protocol BBNewGameDelegate: class {
     func endGame(game:BBGame)
 }
+
 class BBNewGameViewController: BBViewController {
-    @IBOutlet weak var topStackView: UIStackView!
-    @IBOutlet weak var miTextField: UITextField!
-    @IBOutlet weak var viTextField: UITextField!
-    @IBOutlet weak var miZvanjeTextField: UITextField!
+    //MARK: - IBOutlets
+    @IBOutlet private weak var topStackView: UIStackView!
+    @IBOutlet private weak var miTextField: UITextField!
+    @IBOutlet private weak var viTextField: UITextField!
+    @IBOutlet private weak var miZvanjeTextField: UITextField!
+    @IBOutlet private weak var endGameButton: UIButton!
+    @IBOutlet private weak var viZvanjeTextField: UITextField!
     
-    @IBOutlet weak var endGameButton: UIButton!
-    @IBOutlet weak var viZvanjeTextField: UITextField!
+    //MARK: - Variables
     weak var delegate: BBNewGameDelegate? = nil
+    
+    //MARK: - LifeCycle app
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUi()
         dismissKeyboard()
     }
     
-    func congig(delegate: BBNewGameDelegate)
+    //MARK: - Config
+    func config(delegate: BBNewGameDelegate)
     {
         self.delegate = delegate
     }
+    
+    //MARK: - Functions
     private func setupUi() {
         let textFields = [viTextField,miTextField,miZvanjeTextField,viZvanjeTextField]
         textFields.forEach { (textField) in
@@ -42,24 +51,37 @@ class BBNewGameViewController: BBViewController {
         endGameButton.backgroundColor = .redColor
         endGameButton.tintColor = .whiteApricot
         endGameButton.setTitle("done".localized(), for: .normal)
+        endGameButton.isEnabled = false
         
     }
+    
+    //MARK: - Actions
     @IBAction func onTouchEndGameButton(_ sender: Any) {
         guard let miScore = Int(miTextField.text!), let viScore = Int(viTextField.text!) else { return }
         let miZvanje = Int(miZvanjeTextField.text ?? "0") ?? 0
         let viZvanje = Int(viZvanjeTextField.text ?? "0") ?? 0
-        
+        if miScore == 0 && viScore == 0 {
+            miTextField.becomeFirstResponder()
+            return
+        }
         let game = BBGame(miScore: miScore, miZvanje: miZvanje, viScore: viScore, viZvanje: viZvanje)
         delegate?.endGame(game: game)
         navigationController?.popViewController(animated: true)
         
     }
 }
+//MARK: - UITextFieldDelegate
 extension BBNewGameViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField.text!.isEmpty {
             textField.text = "0"
         }
+        if miTextField.text!.isEmpty || viTextField.text!.isEmpty {
+            endGameButton.isEnabled = false
+        } else {
+            endGameButton.isEnabled = true
+        }
+      
     }
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if textField == miTextField {

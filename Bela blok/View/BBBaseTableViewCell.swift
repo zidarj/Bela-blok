@@ -10,8 +10,8 @@ import UIKit
 
 class BBBaseTableViewCell: UITableViewCell {
 
-    @IBOutlet weak private var titleLabel: UILabel!
-    @IBOutlet weak private var separatorView: UIView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var separatorView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         titleLabel.text = ""
