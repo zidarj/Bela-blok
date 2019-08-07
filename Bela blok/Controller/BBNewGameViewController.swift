@@ -50,7 +50,7 @@ class BBNewGameViewController: BBViewController {
         viTextField.delegate = self
         miTextField.delegate = self
         topStackView.arrangedSubviews.forEach { (view) in
-            view.backgroundColor = .redColor
+            view.backgroundColor = .mangoColour
         }
         endGameButton.backgroundColor = .redColor
         endGameButton.tintColor = .whiteApricot
@@ -60,6 +60,8 @@ class BBNewGameViewController: BBViewController {
         viLabel.text = "vi".localized()
         igraLabel.text = "points".localized()
         zvanjeLabel.text = "contract".localized()
+        miLabel.textColor = .brownColour
+        viLabel.textColor = .brownColour
         
     }
     

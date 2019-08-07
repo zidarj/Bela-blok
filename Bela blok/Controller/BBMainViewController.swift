@@ -62,6 +62,12 @@ class BBMainViewController: BBViewController {
         newGameButton.backgroundColor = .redColor
         newGameButton.tintColor = .whiteApricot
         newGameButton.setTitle("newGame".localized(), for: .normal)
+        miLabelScore.textColor = .brownColour
+        viLabelScore.textColor = .brownColour
+        miScore.textColor = .brownColour
+        viScore.textColor = .brownColour
+        gameRule.textColor = .brownColour
+        gameRule.font = UIFont.boldSystemFont(ofSize: 17)
     }
     
     fileprivate func checkStoreInfo() {

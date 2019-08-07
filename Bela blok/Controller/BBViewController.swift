@@ -106,9 +106,9 @@ extension UIColor {
         self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
     }
    
-    static let redColor: UIColor = UIColor(hexString: "#A40606")
-    static let blackColour: UIColor = UIColor(hexString: "#130303")
-    static let whiteApricot: UIColor = UIColor(hexString: "#FFCDBC")
-    static let brownColour: UIColor = UIColor(hexString: "#2D080A")
-    static let mangoColour: UIColor = UIColor(hexString: "#F5853F")
+    static let redColor: UIColor = UIColor(hexString: "#A8201A") //UIColor(hexString: "#A40606")
+    static let blackColour: UIColor = UIColor(hexString: "#130303") // UIColor(hexString: "#130303")
+    static let whiteApricot: UIColor = UIColor(hexString: "#EAEAEA") // UIColor(hexString: "#FFCDBC")
+    static let brownColour: UIColor = UIColor(hexString: "#143642") // UIColor(hexString: "#2D080A")
+    static let mangoColour: UIColor = UIColor(hexString: "#E6AA68") // UIColor(hexString: "#F5853F")
 }

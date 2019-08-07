@@ -57,7 +57,7 @@ class BBSettingsViewController: BBViewController {
         tableView.registerNib(BBBaseTableViewCell.self)
         tableView.registerNib(BBCheckboxTableViewCell.self)
         tableView.registerNib(BBGameTableViewCell.self)
-        
+        tableView.isScrollEnabled = false
     }
     
     private func setupHolder() {
