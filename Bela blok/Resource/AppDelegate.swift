@@ -37,9 +37,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func configDefaultAppearance() {
-        UINavigationBar.appearance().barTintColor = UIColor.red
-        UINavigationBar.appearance().tintColor = UIColor.white
-        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white,
+        UINavigationBar.appearance().barTintColor = UIColor.redColor
+        UINavigationBar.appearance().tintColor = UIColor.whiteApricot
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.whiteApricot,
                                                             .font: UIFont.systemFont(ofSize: 18)]
     }
 

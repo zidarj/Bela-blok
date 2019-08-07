@@ -10,14 +10,16 @@ import UIKit
 import WebKit
 import Localize_Swift
 class BBWebViewController: BBViewController {
-
+    //MARK: - Variables
     private var webView: WKWebView!
     
+    //MARK: - LifeCycle app
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUi()
-        
     }
+    
+    //MARK: - Functions
     private func setupUi() {
         title = "rules".localized()
         webView = WKWebView(frame: view.frame)

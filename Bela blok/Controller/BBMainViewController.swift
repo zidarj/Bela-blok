@@ -11,26 +11,59 @@ extension Notification.Name {
     static let ScoreLabel = Notification.Name("ScoreLable")
     static let deleteData = Notification.Name("DeleteData")
 }
-
+//MARk: - Global variables
 var games = [BBGame]()
 var finalResultMi = 0
 var finalResultVi = 0
 
 class BBMainViewController: BBViewController {
-    
-    @IBOutlet weak var holderView: BBView!
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var gameRule: UILabel!
-    @IBOutlet weak var miLabelScore: UILabel!
-    @IBOutlet weak var viLabelScore: UILabel!
-    @IBOutlet weak var miScore: UILabel!
-    @IBOutlet weak var viScore: UILabel!
-    
-    var header: BBHeaderView = .fromNib()
-    
+    //MARK: - IBOutlets
+    @IBOutlet private weak var holderView: BBView!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var gameRule: UILabel!
+    @IBOutlet private weak var miLabelScore: UILabel!
+    @IBOutlet private weak var viLabelScore: UILabel!
+    @IBOutlet private weak var miScore: UILabel!
+    @IBOutlet private weak var viScore: UILabel!
+    @IBOutlet weak var scoreView: UIView!
+    @IBOutlet weak var newGameButton: UIButton!
+    //MARK: - Variables
+    private var header: BBHeaderView = .fromNib()
     private var settings: BBSettings?
+    
+    //MARK: - LifeCycle app
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkStoreInfo()
+        setupUI()
+        setScoreLabels()
+        setupScoreView()
+        setupNotification()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        let info = BBStoreInfo(miResult: finalResultMi, viResult: finalResultVi)
+        storeInfo(settings: info)
+        storeGames()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        title = "bela_blok".localized()
+    }
+    //MARK: - Functions
+    private func setupUI() {
+        navigationItem.leftBarButtonItems = [rulesBarButtonItem]
+        navigationItem.rightBarButtonItems = [settingsBarButtonItem]
+        statusBarStyle = .lightContent
+        tableView.layer.cornerRadius = 20
+        holderView.initHolderView()
+        tableView.registerNib(BBGameMainTableViewCell.self)
+        scoreView.backgroundColor = .mangoColour
+        newGameButton.backgroundColor = .redColor
+        newGameButton.tintColor = .whiteApricot
+    }
+    
+    fileprivate func checkStoreInfo() {
         if let info = getInfo() {
             self.miScore.text = "score".localized() + "\(info.miResult)"
             self.viScore.text = "score".localized() + "\(info.viResult)"
@@ -38,9 +71,9 @@ class BBMainViewController: BBViewController {
             finalResultMi = info.miResult
             getGames()
         }
-        setupUI()
-        setScoreLabels()
-        setupScoreView()
+    }
+    
+    fileprivate func setupNotification() {
         NotificationCenter.default.addObserver(forName: .ScoreLabel, object: nil, queue: nil) { [weak self] (_) in
             guard let welf = self else { return }
             welf.setScoreLabels()
@@ -54,26 +87,7 @@ class BBMainViewController: BBViewController {
             games.removeAll()
             removeGames()
             welf.setupScoreView()
-            
         }
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        let info = BBStoreInfo(miResult: finalResultMi, viResult: finalResultVi)
-        storeInfo(settings: info)
-        storeGames()
-    }
-    
-    private func setupUI() {
-        
-        navigationItem.leftBarButtonItems = [rulesBarButtonItem]
-        navigationItem.rightBarButtonItems = [settingsBarButtonItem]
-        statusBarStyle = .lightContent
-        
-        tableView.layer.cornerRadius = 20
-        holderView.initHolderView()
-        tableView.registerNib(BBGameMainTableViewCell.self)
-        
     }
     
     private func setupScoreView() {
@@ -113,10 +127,7 @@ class BBMainViewController: BBViewController {
         }
         gameRule.text = String(describing: settings!.game)
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        title = "bela_blok".localized()
-    }
+    //MARK: - Override Actions
     override func onTouchRulesButton() {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         guard let vc = storyBoard.instantiateViewController(withIdentifier: "BBWebViewController") as? BBWebViewController else { return }
@@ -127,6 +138,7 @@ class BBMainViewController: BBViewController {
         guard let vc = storyBoard.instantiateViewController(withIdentifier: "BBSettingsViewController") as? BBSettingsViewController else { return }
         navigationController?.pushViewController(vc, animated: true)
     }
+    //MARK: - IBActions
     @IBAction func onTouchNewGameButton(_ sender: Any) {
         let vc: BBNewGameViewController = (UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BBNewGameViewController") as? BBNewGameViewController)!
         vc.delegate = self
@@ -134,6 +146,7 @@ class BBMainViewController: BBViewController {
     }
     
 }
+//MARK: - UITableViewDelegate, UITableViewDataSource
 extension BBMainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return games.count
@@ -149,7 +162,14 @@ extension BBMainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         return self.header
     }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 44
+    }
 }
+//MARK: - BBNewGameDelegate
 extension BBMainViewController: BBNewGameDelegate {
     func endGame(game: BBGame) {
         games.append(game)

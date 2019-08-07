@@ -16,6 +16,9 @@ class BBGameMainTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        miLabel.textColor = .blackColour
+        viLabel.textColor = .blackColour
+        separatorView.backgroundColor = .brownColour
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -29,6 +29,27 @@
                                     <action selector="onTouchNewGameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pd8-RS-IMf"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AgR-XZ-hW8" customClass="BBView" customModule="Bela_blok" customModuleProvider="target">
+                                <rect key="frame" x="5" y="93" width="404" height="564"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kkz-9X-Vzz">
+                                        <rect key="frame" x="0.0" y="0.0" width="404" height="564"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <sections/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="76K-Lm-sWD"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="COO-q8-8bj"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Kkz-9X-Vzz" firstAttribute="leading" secondItem="AgR-XZ-hW8" secondAttribute="leading" id="5Qf-Nn-cTz"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kkz-9X-Vzz" secondAttribute="trailing" id="QxR-RW-rpn"/>
+                                    <constraint firstAttribute="bottom" secondItem="Kkz-9X-Vzz" secondAttribute="bottom" id="h8u-K6-Bdd"/>
+                                    <constraint firstItem="Kkz-9X-Vzz" firstAttribute="top" secondItem="AgR-XZ-hW8" secondAttribute="top" id="jl9-gm-RR5"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vca-x6-Q4s">
                                 <rect key="frame" x="0.0" y="662" width="414" height="100"/>
                                 <subviews>
@@ -90,26 +111,6 @@
                                     <constraint firstItem="xar-L5-U1n" firstAttribute="top" secondItem="Vca-x6-Q4s" secondAttribute="top" constant="10" id="qw5-Ec-C6r"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AgR-XZ-hW8" customClass="BBView" customModule="Bela_blok" customModuleProvider="target">
-                                <rect key="frame" x="5" y="93" width="404" height="564"/>
-                                <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kkz-9X-Vzz">
-                                        <rect key="frame" x="0.0" y="0.0" width="404" height="564"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="76K-Lm-sWD"/>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="COO-q8-8bj"/>
-                                        </connections>
-                                    </tableView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="Kkz-9X-Vzz" firstAttribute="leading" secondItem="AgR-XZ-hW8" secondAttribute="leading" id="5Qf-Nn-cTz"/>
-                                    <constraint firstAttribute="trailing" secondItem="Kkz-9X-Vzz" secondAttribute="trailing" id="QxR-RW-rpn"/>
-                                    <constraint firstAttribute="bottom" secondItem="Kkz-9X-Vzz" secondAttribute="bottom" id="h8u-K6-Bdd"/>
-                                    <constraint firstItem="Kkz-9X-Vzz" firstAttribute="top" secondItem="AgR-XZ-hW8" secondAttribute="top" id="jl9-gm-RR5"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -132,6 +133,8 @@
                         <outlet property="holderView" destination="AgR-XZ-hW8" id="afC-Xp-Fmv"/>
                         <outlet property="miLabelScore" destination="Re6-0f-yHH" id="NDb-3x-Sne"/>
                         <outlet property="miScore" destination="xar-L5-U1n" id="9zX-R8-sie"/>
+                        <outlet property="newGameButton" destination="zBH-eB-J3x" id="F6A-8e-CiW"/>
+                        <outlet property="scoreView" destination="Vca-x6-Q4s" id="VY7-1x-xr5"/>
                         <outlet property="tableView" destination="Kkz-9X-Vzz" id="UaN-c1-rBB"/>
                         <outlet property="viLabelScore" destination="vfV-ea-gVs" id="43m-z2-9EG"/>
                         <outlet property="viScore" destination="qeC-IN-JrH" id="Cw8-Dr-wRD"/>
@@ -230,9 +233,9 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8eX-bJ-7xR">
-                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="762" width="414" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="HMd-y6-ZoP"/>
+                                    <constraint firstAttribute="height" constant="100" id="HMd-y6-ZoP"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>

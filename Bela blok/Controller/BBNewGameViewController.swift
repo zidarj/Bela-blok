@@ -30,12 +30,19 @@ class BBNewGameViewController: BBViewController {
         self.delegate = delegate
     }
     private func setupUi() {
-        let buttons = [viTextField,miTextField,miZvanjeTextField,viZvanjeTextField]
-        buttons.forEach { (textField) in
+        let textFields = [viTextField,miTextField,miZvanjeTextField,viZvanjeTextField]
+        textFields.forEach { (textField) in
             textField?.keyboardType  = .numberPad
         }
         viTextField.delegate = self
         miTextField.delegate = self
+        topStackView.arrangedSubviews.forEach { (view) in
+            view.backgroundColor = .redColor
+        }
+        endGameButton.backgroundColor = .redColor
+        endGameButton.tintColor = .whiteApricot
+        endGameButton.setTitle("done".localized(), for: .normal)
+        
     }
     @IBAction func onTouchEndGameButton(_ sender: Any) {
         guard let miScore = Int(miTextField.text!), let viScore = Int(viTextField.text!) else { return }

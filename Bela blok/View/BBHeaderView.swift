@@ -11,11 +11,15 @@ import UIKit
 class BBHeaderView: UIView {
     @IBOutlet weak var miLabel: UILabel!
     @IBOutlet weak var viLabel: UILabel!
+    @IBOutlet weak var separatorView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         miLabel.text = "mi".localized().uppercased()
         viLabel.text = "vi".localized().uppercased()
+        miLabel.textColor = UIColor.blackColour
+        viLabel.textColor = UIColor.blackColour
+        separatorView.backgroundColor = UIColor.redColor
     }
 
 }
