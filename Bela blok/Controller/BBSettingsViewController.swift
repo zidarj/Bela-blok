@@ -132,6 +132,7 @@ extension BBSettingsViewController: UITableViewDelegate, UITableViewDataSource {
             break
         case .deleteData:
             NotificationCenter.default.post(name: .deleteData, object: nil)
+            navigationController?.popViewController(animated: true)
         case .game:
             let alertController = UIAlertController(title: "game".localized().uppercased(), message: "", preferredStyle: .alert)
             alertController.addTextField { (textField) in
@@ -156,7 +157,7 @@ extension BBSettingsViewController: UITableViewDelegate, UITableViewDataSource {
             pickerView.delegate = self
             alertController.view.addSubview(pickerView)
             
-            let ok = UIAlertAction(title: "ok", style: .default, handler: { (_) in
+            let ok = UIAlertAction(title: "ok".localized(), style: .default, handler: { (_) in
                 let selectedLanguage = pickerView.selectedRow(inComponent: 0)
                 if selectedLanguage == 0 {
                     Localize.setCurrentLanguage("hr")

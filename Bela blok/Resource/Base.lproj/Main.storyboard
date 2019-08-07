@@ -268,11 +268,15 @@
                     </view>
                     <connections>
                         <outlet property="endGameButton" destination="8eX-bJ-7xR" id="tzi-zp-AXO"/>
+                        <outlet property="igraLabel" destination="2ao-X0-o3V" id="Bm4-Jj-aSa"/>
+                        <outlet property="miLabel" destination="iAT-3b-cMT" id="had-WO-TM6"/>
                         <outlet property="miTextField" destination="bR5-4j-H71" id="6Lq-ft-UrS"/>
                         <outlet property="miZvanjeTextField" destination="BXb-N5-MVk" id="o8K-Jd-vT4"/>
                         <outlet property="topStackView" destination="rvi-hE-vrT" id="F91-Ea-xxd"/>
+                        <outlet property="viLabel" destination="7cn-dK-6Zp" id="oJc-UE-LVs"/>
                         <outlet property="viTextField" destination="bjc-ez-KkP" id="ow4-5e-ibO"/>
                         <outlet property="viZvanjeTextField" destination="hv9-VH-CJS" id="nxF-fW-bZy"/>
+                        <outlet property="zvanjeLabel" destination="bLo-tW-SRR" id="Lqc-Ja-RRn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="exE-Ej-hjF" userLabel="First Responder" sceneMemberID="firstResponder"/>

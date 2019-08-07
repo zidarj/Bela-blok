@@ -20,6 +20,10 @@ class BBNewGameViewController: BBViewController {
     @IBOutlet private weak var miZvanjeTextField: UITextField!
     @IBOutlet private weak var endGameButton: UIButton!
     @IBOutlet private weak var viZvanjeTextField: UITextField!
+    @IBOutlet weak var igraLabel: UILabel!
+    @IBOutlet weak var zvanjeLabel: UILabel!
+    @IBOutlet weak var viLabel: UILabel!
+    @IBOutlet weak var miLabel: UILabel!
     
     //MARK: - Variables
     weak var delegate: BBNewGameDelegate? = nil
@@ -52,6 +56,10 @@ class BBNewGameViewController: BBViewController {
         endGameButton.tintColor = .whiteApricot
         endGameButton.setTitle("done".localized(), for: .normal)
         endGameButton.isEnabled = false
+        miLabel.text = "mi".localized()
+        viLabel.text = "vi".localized()
+        igraLabel.text = "points".localized()
+        zvanjeLabel.text = "contract".localized()
         
     }
     
