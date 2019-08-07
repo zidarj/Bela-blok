@@ -19,9 +19,19 @@ struct BBGame: Equatable {
         self.miZvanje = miZvanje
         self.viScore = viScore
         self.viZvanje = viZvanje
-        
+
     }
     
+    init?(dictionary : [String:Int]) {
+        guard let miScore = dictionary["miScore"],
+            let miZvanje = dictionary["miZvanje"],
+            let viScore = dictionary["viScore"],
+            let viZvanje = dictionary["viZvanje"] else { return nil }
+        self.init(miScore: miScore, miZvanje: miZvanje, viScore: viScore, viZvanje: viZvanje)
+    }
+    var propertyListRepresentation : [String:Any] {
+        return ["miScore" : miScore, "miZvanje" : miZvanje, "viScore" : viScore, "viZvanje" : viZvanje]
+    }
     func miResult() -> Int {
         return miZvanje + miScore
     }
@@ -29,4 +39,17 @@ struct BBGame: Equatable {
     func viResult() -> Int {
         return viZvanje + viScore
     }
+}
+func storeGames() {
+    let propertylistSongs = games.map{ $0.propertyListRepresentation }
+    UserDefaults.standard.set(propertylistSongs, forKey: "storeGame")
+}
+
+func getGames() {
+    if let propertylistSongs = UserDefaults.standard.array(forKey: "storeGame") as? [[String:Int]] {
+        games = propertylistSongs.compactMap{ BBGame(dictionary: $0) }
+    }
+}
+func removeGames() {
+    UserDefaults.standard.removeObject(forKey: "storeGame")
 }

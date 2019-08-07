@@ -20,6 +20,7 @@
 		7E33F7BF22CA1BAF00A9A24C /* BBGameMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E33F7BD22CA1BAF00A9A24C /* BBGameMainTableViewCell.xib */; };
 		7E33F7C122CA1F5600A9A24C /* BBNewGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E33F7C022CA1F5600A9A24C /* BBNewGameViewController.swift */; };
 		7E3B6CBB22CCE07A00A7BE49 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E3B6CBA22CCE07A00A7BE49 /* GoogleService-Info.plist */; };
+		7E87E60022E71EC500EFC869 /* BBStoreInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E87E5FF22E71EC500EFC869 /* BBStoreInfo.swift */; };
 		7EAB528522B0D99E004222B6 /* BBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAB528422B0D99E004222B6 /* BBView.swift */; };
 		7EAB528822B0E6C0004222B6 /* BBCheckboxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAB528622B0E6C0004222B6 /* BBCheckboxTableViewCell.swift */; };
 		7EAB528922B0E6C0004222B6 /* BBCheckboxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EAB528722B0E6C0004222B6 /* BBCheckboxTableViewCell.xib */; };
@@ -56,6 +57,7 @@
 		7E33F7BD22CA1BAF00A9A24C /* BBGameMainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBGameMainTableViewCell.xib; sourceTree = "<group>"; };
 		7E33F7C022CA1F5600A9A24C /* BBNewGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBNewGameViewController.swift; sourceTree = "<group>"; };
 		7E3B6CBA22CCE07A00A7BE49 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7E87E5FF22E71EC500EFC869 /* BBStoreInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBStoreInfo.swift; sourceTree = "<group>"; };
 		7EAB528422B0D99E004222B6 /* BBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BBView.swift; path = "Bela blok/Model/BBView.swift"; sourceTree = SOURCE_ROOT; };
 		7EAB528622B0E6C0004222B6 /* BBCheckboxTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCheckboxTableViewCell.swift; sourceTree = "<group>"; };
 		7EAB528722B0E6C0004222B6 /* BBCheckboxTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBCheckboxTableViewCell.xib; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				7EAB528A22B0FB53004222B6 /* BBSettings.swift */,
 				7E33F7B822CA194500A9A24C /* BBScore.swift */,
 				7E33F7BA22CA199C00A9A24C /* BBGame.swift */,
+				7E87E5FF22E71EC500EFC869 /* BBStoreInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				7E27B9BF22C5F2DE00EC29BE /* BBGameTableViewCell.swift in Sources */,
 				7E33F7BB22CA199C00A9A24C /* BBGame.swift in Sources */,
 				7EAB528B22B0FB53004222B6 /* BBSettings.swift in Sources */,
+				7E87E60022E71EC500EFC869 /* BBStoreInfo.swift in Sources */,
 				7EAB528522B0D99E004222B6 /* BBView.swift in Sources */,
 				7ED7EEA322AA4C1C009FB305 /* BBMainViewController.swift in Sources */,
 				7EAB528822B0E6C0004222B6 /* BBCheckboxTableViewCell.swift in Sources */,

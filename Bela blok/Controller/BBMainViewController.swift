@@ -11,6 +11,11 @@ extension Notification.Name {
     static let ScoreLabel = Notification.Name("ScoreLable")
     static let deleteData = Notification.Name("DeleteData")
 }
+
+var games = [BBGame]()
+var finalResultMi = 0
+var finalResultVi = 0
+
 class BBMainViewController: BBViewController {
     
     @IBOutlet weak var holderView: BBView!
@@ -22,12 +27,17 @@ class BBMainViewController: BBViewController {
     @IBOutlet weak var viScore: UILabel!
     
     var header: BBHeaderView = .fromNib()
-    var games: [BBGame] = [BBGame]()
-    var finalResultMi = 0
-    var finalResultVi = 0
+    
     private var settings: BBSettings?
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let info = getInfo() {
+            self.miScore.text = "score".localized() + "\(info.miResult)"
+            self.viScore.text = "score".localized() + "\(info.viResult)"
+            finalResultVi = info.viResult
+            finalResultMi = info.miResult
+            getGames()
+        }
         setupUI()
         setScoreLabels()
         setupScoreView()
@@ -37,18 +47,22 @@ class BBMainViewController: BBViewController {
         }
         NotificationCenter.default.addObserver(forName: .deleteData, object: nil, queue: nil) { [weak self](_) in
             guard let welf = self else { return }
-            welf.finalResultVi = 0
-            welf.finalResultMi = 0
-            welf.viScore.text = "\(welf.finalResultVi)"
-            welf.miScore.text = "\(welf.finalResultMi)"
-            welf.games.removeAll()
+            finalResultVi = 0
+            finalResultMi = 0
+            welf.viScore.text = "score".localized() + "\(finalResultVi)"
+            welf.miScore.text = "score".localized() + "\(finalResultMi)"
+            games.removeAll()
+            removeGames()
             welf.setupScoreView()
             
         }
-        // Do any additional setup after loading the view.
     }
     
-    
+    override func viewDidDisappear(_ animated: Bool) {
+        let info = BBStoreInfo(miResult: finalResultMi, viResult: finalResultVi)
+        storeInfo(settings: info)
+        storeGames()
+    }
     
     private func setupUI() {
         
@@ -75,10 +89,10 @@ class BBMainViewController: BBViewController {
                 return
             }else if miResult > viResult {
                 finalResultMi += (settings!.game / 2) > viResult && settings!.isDoublePoint ? 2 : 1
-                miScore.text = "\(finalResultMi)"
+                miScore.text = "score".localized() + "\(finalResultMi)"
             }else if viResult > miResult {
                 finalResultVi += (settings!.game / 2) > miResult && settings!.isDoublePoint ? 2 : 1
-                viScore.text = "\(finalResultVi)"
+                viScore.text = "score".localized() + "\(finalResultVi)"
             }
             miLabelScore.text = "0"
             viLabelScore.text = "0"
@@ -141,6 +155,4 @@ extension BBMainViewController: BBNewGameDelegate {
         games.append(game)
         setupScoreView()
     }
-    
-    
 }
