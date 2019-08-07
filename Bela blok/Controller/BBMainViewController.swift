@@ -61,6 +61,7 @@ class BBMainViewController: BBViewController {
         scoreView.backgroundColor = .mangoColour
         newGameButton.backgroundColor = .redColor
         newGameButton.tintColor = .whiteApricot
+        newGameButton.setTitle("newGame".localized(), for: .normal)
     }
     
     fileprivate func checkStoreInfo() {
@@ -86,6 +87,7 @@ class BBMainViewController: BBViewController {
             welf.miScore.text = "score".localized() + "\(finalResultMi)"
             games.removeAll()
             removeGames()
+            removeStoreInfo()
             welf.setupScoreView()
         }
     }

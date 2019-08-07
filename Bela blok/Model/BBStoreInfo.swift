@@ -36,3 +36,6 @@ func getInfo() -> BBStoreInfo? {
     }
     return nil
 }
+func removeStoreInfo() {
+    UserDefaults.standard.removeObject(forKey: "BBStoreInfo")
+}
