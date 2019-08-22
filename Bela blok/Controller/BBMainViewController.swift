@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 extension Notification.Name {
     static let ScoreLabel = Notification.Name("ScoreLable")
     static let deleteData = Notification.Name("DeleteData")
@@ -27,6 +28,7 @@ class BBMainViewController: BBViewController {
     @IBOutlet private weak var viScore: UILabel!
     @IBOutlet weak var scoreView: UIView!
     @IBOutlet weak var newGameButton: UIButton!
+    @IBOutlet weak var banerView: GADBannerView!
     //MARK: - Variables
     private var header: BBHeaderView = .fromNib()
     private var settings: BBSettings?
@@ -39,6 +41,9 @@ class BBMainViewController: BBViewController {
         setScoreLabels()
         setupScoreView()
         setupNotification()
+        banerView.adUnitID = "ca-app-pub-3228246244771060/8766447581"//ca-app-pub-3940256099942544/2934735716
+        banerView.rootViewController = self
+        banerView.load(GADRequest())
     }
     
     override func viewDidDisappear(_ animated: Bool) {

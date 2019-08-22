@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 //MARK: - BBNewGameDelegate
 protocol BBNewGameDelegate: class {
     func endGame(game:BBGame)
@@ -24,6 +25,7 @@ class BBNewGameViewController: BBViewController {
     @IBOutlet weak var zvanjeLabel: UILabel!
     @IBOutlet weak var viLabel: UILabel!
     @IBOutlet weak var miLabel: UILabel!
+    @IBOutlet weak var banerView: GADBannerView!
     
     //MARK: - Variables
     weak var delegate: BBNewGameDelegate? = nil
@@ -33,6 +35,10 @@ class BBNewGameViewController: BBViewController {
         super.viewDidLoad()
         setupUi()
         dismissKeyboard()
+        banerView.adUnitID = "ca-app-pub-3228246244771060/8766447581"
+        banerView.rootViewController = self
+        banerView.adSize = kGADAdSizeMediumRectangle
+        banerView.load(GADRequest())
     }
     
     //MARK: - Config

@@ -7,5 +7,6 @@ target 'Bela blok' do
 
   pod 'Localize-Swift'
   pod 'Firebase/Core'
-
+  pod 'Firebase/Analytics'
+  pod 'Firebase/AdMob'
 end

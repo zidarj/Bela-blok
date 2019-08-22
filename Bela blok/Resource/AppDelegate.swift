@@ -9,6 +9,7 @@
 import UIKit
 import Localize_Swift
 import FirebaseCore
+import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -31,7 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         #if DEBUG
-        //FirebaseApp.configure()
+        FirebaseApp.configure()
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
         #endif
         return true
     }

@@ -30,10 +30,10 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AgR-XZ-hW8" customClass="BBView" customModule="Bela_blok" customModuleProvider="target">
-                                <rect key="frame" x="5" y="5" width="404" height="564"/>
+                                <rect key="frame" x="5" y="5" width="404" height="514"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kkz-9X-Vzz">
-                                        <rect key="frame" x="0.0" y="0.0" width="404" height="564"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="404" height="514"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <sections/>
                                         <connections>
@@ -46,7 +46,7 @@
                                 <constraints>
                                     <constraint firstItem="Kkz-9X-Vzz" firstAttribute="leading" secondItem="AgR-XZ-hW8" secondAttribute="leading" id="5Qf-Nn-cTz"/>
                                     <constraint firstAttribute="trailing" secondItem="Kkz-9X-Vzz" secondAttribute="trailing" id="QxR-RW-rpn"/>
-                                    <constraint firstAttribute="bottom" secondItem="Kkz-9X-Vzz" secondAttribute="bottom" id="h8u-K6-Bdd"/>
+                                    <constraint firstAttribute="bottom" secondItem="Kkz-9X-Vzz" secondAttribute="bottom" id="jGB-CL-hgy"/>
                                     <constraint firstItem="Kkz-9X-Vzz" firstAttribute="top" secondItem="AgR-XZ-hW8" secondAttribute="top" id="jl9-gm-RR5"/>
                                 </constraints>
                             </view>
@@ -111,24 +111,35 @@
                                     <constraint firstItem="xar-L5-U1n" firstAttribute="top" secondItem="Vca-x6-Q4s" secondAttribute="top" constant="10" id="qw5-Ec-C6r"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fDK-lb-XRa" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="524" width="414" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ZWi-iO-zh0"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zBH-eB-J3x" secondAttribute="bottom" id="CGB-xJ-OMh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zBH-eB-J3x" secondAttribute="trailing" id="DSH-4T-LTf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vca-x6-Q4s" secondAttribute="trailing" id="Der-HP-IFb"/>
-                            <constraint firstItem="Vca-x6-Q4s" firstAttribute="top" secondItem="AgR-XZ-hW8" secondAttribute="bottom" constant="5" id="GKD-Zz-lfu"/>
+                            <constraint firstItem="fDK-lb-XRa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FS9-CQ-FMV"/>
                             <constraint firstItem="zBH-eB-J3x" firstAttribute="top" secondItem="Vca-x6-Q4s" secondAttribute="bottom" id="HPr-GO-aMO"/>
                             <constraint firstItem="zBH-eB-J3x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="K9P-5b-ZTq"/>
                             <constraint firstItem="AgR-XZ-hW8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="Kgb-Da-kw1"/>
+                            <constraint firstItem="Vca-x6-Q4s" firstAttribute="top" secondItem="fDK-lb-XRa" secondAttribute="bottom" id="Mfv-de-Ihi"/>
                             <constraint firstItem="AgR-XZ-hW8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="Tbx-iz-DIw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AgR-XZ-hW8" secondAttribute="trailing" constant="5" id="aeG-zC-nUH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fDK-lb-XRa" secondAttribute="trailing" id="nuH-sz-tQy"/>
+                            <constraint firstItem="fDK-lb-XRa" firstAttribute="top" secondItem="AgR-XZ-hW8" secondAttribute="bottom" constant="5" id="p7H-Ih-2ME"/>
                             <constraint firstItem="Vca-x6-Q4s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xSP-fz-OJT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="R1N-Jh-Gs3"/>
                     <connections>
+                        <outlet property="banerView" destination="fDK-lb-XRa" id="F2e-uz-BGo"/>
                         <outlet property="gameRule" destination="DNn-r0-xnZ" id="ONH-ZN-FUs"/>
                         <outlet property="holderView" destination="AgR-XZ-hW8" id="afC-Xp-Fmv"/>
                         <outlet property="miLabelScore" destination="Re6-0f-yHH" id="NDb-3x-Sne"/>
@@ -142,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1087" y="745"/>
+            <point key="canvasLocation" x="1086.9565217391305" y="744.64285714285711"/>
         </scene>
         <!--New Game View Controller-->
         <scene sceneID="zif-jQ-Sg5">
@@ -242,10 +253,18 @@
                                     <action selector="onTouchEndGameButton:" destination="ulp-6a-mJ8" eventType="touchUpInside" id="LrL-uh-zGI"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Es-5y-Od5" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="512" width="414" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="5OK-TJ-buo"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="2ao-X0-o3V" firstAttribute="leading" secondItem="vpN-Rg-bXl" secondAttribute="leading" constant="10" id="06s-SC-JUq"/>
+                            <constraint firstItem="8eX-bJ-7xR" firstAttribute="top" secondItem="3Es-5y-Od5" secondAttribute="bottom" id="2PS-rF-t1m"/>
                             <constraint firstItem="8eX-bJ-7xR" firstAttribute="leading" secondItem="eBo-pE-hAb" secondAttribute="leading" id="3ah-yt-vom"/>
                             <constraint firstItem="rvi-hE-vrT" firstAttribute="leading" secondItem="vpN-Rg-bXl" secondAttribute="leading" id="ADl-85-Bg2"/>
                             <constraint firstItem="bLo-tW-SRR" firstAttribute="top" secondItem="h9D-f7-Skv" secondAttribute="bottom" constant="20" id="O3e-gN-jSa"/>
@@ -257,16 +276,19 @@
                             <constraint firstItem="eBo-pE-hAb" firstAttribute="trailing" secondItem="rvi-hE-vrT" secondAttribute="trailing" id="XVs-QP-nXy"/>
                             <constraint firstItem="eBo-pE-hAb" firstAttribute="trailing" secondItem="r9A-Eg-SB6" secondAttribute="trailing" constant="10" id="YG0-2a-yKa"/>
                             <constraint firstItem="r9A-Eg-SB6" firstAttribute="leading" secondItem="eBo-pE-hAb" secondAttribute="leading" constant="10" id="eoS-OC-LUf"/>
+                            <constraint firstItem="eBo-pE-hAb" firstAttribute="trailing" secondItem="3Es-5y-Od5" secondAttribute="trailing" id="hVT-C4-hUY"/>
                             <constraint firstItem="bLo-tW-SRR" firstAttribute="leading" secondItem="vpN-Rg-bXl" secondAttribute="leading" constant="10" id="pVG-mg-ELL"/>
                             <constraint firstItem="eBo-pE-hAb" firstAttribute="bottom" secondItem="8eX-bJ-7xR" secondAttribute="bottom" id="qpB-qk-UWW"/>
                             <constraint firstItem="rvi-hE-vrT" firstAttribute="top" secondItem="eBo-pE-hAb" secondAttribute="top" id="sS5-fq-X5k"/>
                             <constraint firstItem="2ao-X0-o3V" firstAttribute="top" secondItem="rvi-hE-vrT" secondAttribute="bottom" constant="10" id="uJZ-iJ-c0N"/>
                             <constraint firstItem="r9A-Eg-SB6" firstAttribute="top" secondItem="bLo-tW-SRR" secondAttribute="bottom" constant="10" id="vme-lf-YKE"/>
                             <constraint firstItem="eBo-pE-hAb" firstAttribute="trailing" secondItem="2ao-X0-o3V" secondAttribute="trailing" constant="10" id="yCO-ci-6mb"/>
+                            <constraint firstItem="3Es-5y-Od5" firstAttribute="leading" secondItem="eBo-pE-hAb" secondAttribute="leading" id="yg1-iw-1a9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eBo-pE-hAb"/>
                     </view>
                     <connections>
+                        <outlet property="banerView" destination="3Es-5y-Od5" id="VJZ-cx-zry"/>
                         <outlet property="endGameButton" destination="8eX-bJ-7xR" id="tzi-zp-AXO"/>
                         <outlet property="igraLabel" destination="2ao-X0-o3V" id="Bm4-Jj-aSa"/>
                         <outlet property="miLabel" destination="iAT-3b-cMT" id="had-WO-TM6"/>
