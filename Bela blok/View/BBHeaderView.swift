@@ -21,5 +21,6 @@ class BBHeaderView: UIView {
         viLabel.textColor = UIColor.blackColour
         separatorView.backgroundColor = UIColor.redColor
     }
+    
 
 }

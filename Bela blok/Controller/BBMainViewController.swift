@@ -30,7 +30,7 @@ class BBMainViewController: BBViewController {
     @IBOutlet weak var newGameButton: UIButton!
     @IBOutlet weak var banerView: GADBannerView!
     //MARK: - Variables
-    private var header: BBHeaderView = .fromNib()
+    private var header: BBHeaderView!
     private var settings: BBSettings?
     
     //MARK: - LifeCycle app
@@ -54,6 +54,9 @@ class BBMainViewController: BBViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         title = "bela_blok".localized()
+        if tableView.contentSize.height > holderView.frame.height {
+            tableView.scrollToRow(at: IndexPath(row: games.count - 1, section: 0), at: .none, animated: false)
+        }
     }
     //MARK: - Functions
     private func setupUI() {
@@ -173,6 +176,7 @@ extension BBMainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        header = .fromNib()
         return self.header
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
