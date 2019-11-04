@@ -35,10 +35,15 @@ class BBNewGameViewController: BBViewController {
         super.viewDidLoad()
         setupUi()
         dismissKeyboard()
+        
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         banerView.adUnitID = "ca-app-pub-3228246244771060/8766447581"
         banerView.rootViewController = self
         banerView.adSize = kGADAdSizeMediumRectangle
         banerView.load(GADRequest())
+        banerView.delegate = self
     }
     
     //MARK: - Config
@@ -123,5 +128,10 @@ extension BBNewGameViewController: UITextFieldDelegate {
             return 0
         }
         return game - result
+    }
+}
+extension BBNewGameViewController: GADBannerViewDelegate {
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+        print(error.description)
     }
 }
