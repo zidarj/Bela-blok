@@ -8,6 +8,8 @@
 
 import UIKit
 import Localize_Swift
+import MessageUI
+
 protocol BBSettingsViewDelegate: class {
     func onChangeLanguage()
 }
@@ -87,9 +89,25 @@ class BBSettingsViewController: BBViewController {
         title = "settings".localized()
     }
     
-    
+    private func sendEmail() {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients(["josip.zidar11@gmail.com"])
+            mail.setSubject("BelaBlok-info")
+            
+            present(mail, animated: true)
+        } else {
+            // show failure alert
+        }
+    }
 }
-
+//MARK: - MFMailComposeViewControllerDelegate
+extension BBSettingsViewController: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+    }
+}
 //MARK: - UITableViewDelegate, UITableViewDataSource
 extension BBSettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -135,7 +153,7 @@ extension BBSettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch Settings.init(rawValue: indexPath.row)! {
         case .contact:
-            break
+            self.sendEmail()
         case .deleteData:
             NotificationCenter.default.post(name: .deleteData, object: nil)
             navigationController?.popViewController(animated: true)
