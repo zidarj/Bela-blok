@@ -69,8 +69,8 @@ class BBNewGameViewController: BBViewController {
         endGameButton.isEnabled = false
         miLabel.text = "mi".localized()
         viLabel.text = "vi".localized()
-        igraLabel.text = "points".localized()
-        zvanjeLabel.text = "contract".localized()
+        igraLabel.text = "points".localized() + ":"
+        zvanjeLabel.text = "contract".localized() + ":"
         miLabel.textColor = .brownColour
         viLabel.textColor = .brownColour
         

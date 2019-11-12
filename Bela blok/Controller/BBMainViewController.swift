@@ -143,6 +143,11 @@ class BBMainViewController: BBViewController {
         }
         gameRule.text = String(describing: settings!.game)
     }
+    
+    private func deleteGame(with index: Int) {
+        games.remove(at: index)
+        setupScoreView()
+    }
     //MARK: - Override Actions
     override func onTouchRulesButton() {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
@@ -152,6 +157,7 @@ class BBMainViewController: BBViewController {
     override func onTouchSettingsButton() {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         guard let vc = storyBoard.instantiateViewController(withIdentifier: "BBSettingsViewController") as? BBSettingsViewController else { return }
+        vc.delegate = self
         navigationController?.pushViewController(vc, animated: true)
     }
     //MARK: - IBActions
@@ -185,11 +191,30 @@ extension BBMainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 44
     }
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (_, _, completionHandler) in
+            self.deleteGame(with: indexPath.row)
+            completionHandler(true)
+        }
+        deleteAction.image = UIImage(named: "trash")
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+        return configuration
+    }
 }
 //MARK: - BBNewGameDelegate
 extension BBMainViewController: BBNewGameDelegate {
     func endGame(game: BBGame) {
         games.append(game)
         setupScoreView()
+    }
+}
+//MARK: - BBSettingsViewDelegate
+extension BBMainViewController: BBSettingsViewDelegate {
+    func onChangeLanguage() {
+        setupScoreView()
+        miScore.text = "score".localized() + "\(finalResultMi)"
+        viScore.text = "score".localized() + "\(finalResultVi)"
+        newGameButton.setTitle("newGame".localized(), for: .normal)
+        tableView.reloadData()
     }
 }

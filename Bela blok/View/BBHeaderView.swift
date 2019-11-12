@@ -20,6 +20,7 @@ class BBHeaderView: UIView {
         miLabel.textColor = UIColor.blackColour
         viLabel.textColor = UIColor.blackColour
         separatorView.backgroundColor = UIColor.redColor
+        separatorView.layer.cornerRadius = separatorView.frame.height / 2 
     }
     
 

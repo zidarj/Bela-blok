@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -54,7 +54,7 @@
 		7E33F7BC22CA1BAF00A9A24C /* BBGameMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBGameMainTableViewCell.swift; sourceTree = "<group>"; };
 		7E33F7BD22CA1BAF00A9A24C /* BBGameMainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBGameMainTableViewCell.xib; sourceTree = "<group>"; };
 		7E33F7C022CA1F5600A9A24C /* BBNewGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBNewGameViewController.swift; sourceTree = "<group>"; };
-		7E3B6CBA22CCE07A00A7BE49 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7E3B6CBA22CCE07A00A7BE49 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7E87E5FF22E71EC500EFC869 /* BBStoreInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBStoreInfo.swift; sourceTree = "<group>"; };
 		7EAB528422B0D99E004222B6 /* BBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BBView.swift; path = "Bela blok/Model/BBView.swift"; sourceTree = SOURCE_ROOT; };
 		7EAB528622B0E6C0004222B6 /* BBCheckboxTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCheckboxTableViewCell.swift; sourceTree = "<group>"; };

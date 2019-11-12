@@ -8,6 +8,10 @@
 
 import UIKit
 import Localize_Swift
+protocol BBSettingsViewDelegate: class {
+    func onChangeLanguage()
+}
+
 class BBSettingsViewController: BBViewController {
     
     //MARK: - IBOutlets
@@ -33,6 +37,8 @@ class BBSettingsViewController: BBViewController {
             return BBSettings()
         }
     }()
+    
+    var delegate: BBSettingsViewDelegate?
     
     //MARK: - LifeCycle app
     override func viewDidLoad() {
@@ -165,6 +171,9 @@ extension BBSettingsViewController: UITableViewDelegate, UITableViewDataSource {
                 }else {
                     Localize.setCurrentLanguage("en")
                     self.reload()
+                }
+                if let del = self.delegate {
+                    del.onChangeLanguage()
                 }
                 self.tableView.reloadData()
             })
